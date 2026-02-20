@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/compare/v2.1.0..v2.1.1) - 2026-02-20
+
+### 🔧 Fixes
+
+- Fonts ([dcc2658](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/dcc2658d5ee2b46d988290b483a0c16d90c9e148))
+
 ## [2.1.0](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/compare/v2.0.0..v2.1.0) - 2025-12-13
 
 ### 🚀 Features
