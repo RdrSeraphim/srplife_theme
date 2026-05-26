@@ -2,7 +2,7 @@
 
 <div class="container">
     {{#post}}
-    <article class="cde-window">
+    <article class="cde-window h-entry">
         <div class="cde-resize-handle cde-resize-handle-tl"></div>
         <div class="cde-resize-handle cde-resize-handle-tr"></div>
         <div class="cde-resize-handle cde-resize-handle-bl"></div>
@@ -26,7 +26,7 @@
     </div>    
         
         <div class="cde-window-content">
-            <header class="post-header h-entry">
+            <header class="post-header">
                 {{#if feature_image}}
                 <figure class="post-image">
                     <img src="{{img_url feature_image size="l"}}" alt="{{title}}" />
@@ -34,15 +34,25 @@
                 {{/if}}
 
                 <div class="post-header-content">
-                    <h1 class="post-title">{{title}}</h1>
+                    <h1 class="post-title p-name">{{title}}</h1>
                     <section class="post-meta">
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMMM YYYY"}}</time> in {{#primary_tag}}<a href="{{url}}">{{name}}</a>{{/primary_tag}} ({{reading_time minute="1 minute read" minutes="% minute read"}})
+                        <time class="post-date dt-published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMMM YYYY"}}</time> in {{#primary_tag}}<a class="p-category" href="{{url}}">{{name}}</a>{{/primary_tag}} ({{reading_time minute="1 minute read" minutes="% minute read"}})
                     </section>
+                    <a class="u-url" href="{{url absolute="true"}}" style="display:none;"></a>
+                    <span class="p-author h-card" style="display:none;">
+                        <img class="u-photo p-photo" src="{{asset 'images/me.jpg'}}" alt="{{title}}"/>
+                        <a class="u-url p-name" href="https://srp.life">Rdr. Seraphim Pardee</a>
+                    </span>
                 </div>
             </header>
 
             <section class="gh-content e-content">
                 {{content}}
+            </section>
+
+            <section class="webmentions-section" id="webmentions" style="display:none;">
+                <h3 class="webmentions-heading">Elsewhere on the Web</h3>
+                <div id="webmentions-list"></div>
             </section>
 
             {{#if comments}}

@@ -23,9 +23,37 @@
         }
     </style>--}}
 
+    {{!-- Webmention / IndieWeb Discovery --}}
+    <link rel="webmention" href="https://webmention.io/srp.life/webmention" />
+    <link rel="pingback" href="https://webmention.io/srp.life/xmlrpc" />
+
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
+    <div style="display: none;" class="h-card vcard">
+        <span class="p-name fn">Rdr. Seraphim Pardee</span>
+        <span class="p-honorific-prefix title">Rdr.</span>
+        <span class="p-given-name given-name">Seraphim</span>
+        <span class="p-additional-name">R.</span>
+        <span class="p-family-name family-name">Pardee</span>
+        <span class="p-nickname nickname">srp</span>
+        <span class="p-nickname nickname">xsrp</span>
+        <span class="p-nickname nickname">SeraphimRP</span>
+        <span class="p-nickname nickname">RdrSeraphim</span>
+        <span class="p-job-title title">Reader (minor clergy), Software Engineer</span>
+        <img class="u-photo photo" src="https://srp.life/content/images/size/w256h256/format/jpeg/2025/03/453064960_3021890884616733_2803591731230311694_n.jpg" />
+        <a class="u-url url" href="https://srp.life">web</a>
+        <a class="u-email email" href="mailto:me@srp.life">email</a>
+        <a class="u-email email" href="mailto:srp@kerygma.digital">email 2</a>
+        <span class="p-note note">I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a
+            husband and dad of two.</span>
+        <div class="p-adr h-adr">
+            <span class="p-region" title="Michigan">MI</span>
+            <span class="p-country-name">United States of America</span>
+        </div>
+        <time class="dt-bday">1998-08-25</time>
+        <span class="p-sex p-gender-identity">Male</span>
+    </div>
     <div class="cde-system-bar">
         <button id="system-bar-menu-toggle" class="cde-system-bar-btn mobile-only" aria-label="Menu">
             Menu <span class="cde-menu-icon">▼</span>
@@ -49,18 +77,21 @@
         {{{body}}}
 
         <footer>
-            <p>&copy; {{date format="YYYY"}} <a href="https://srp.life">{{@site.title}}</a> - Published with <a href="https://ghost.org">Ghost</a>
+            <p>&copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> - Published with <a href="https://ghost.org">Ghost</a>
             <br>
             <br>
-            <a href="https://github.com/SeraphimRP/srplife_theme">Theme</a> inspired by <a href="https://www.opencode.net/phob1an/commonality">Commonality Sol</a>
+            <a href="https://github.com/RdrSeraphim/srplife_theme">Theme</a> inspired by <a href="https://www.opencode.net/phob1an/commonality">Commonality Sol</a>
             <br>
             <br>
-            <a href="https://vivaldi.com"><img src="{{asset "images/88x31/vivaldi.gif"}}" /></a>
             <a href="https://fedoraproject.org"><img src="{{asset "images/88x31/poweredbyfedora.gif"}}" /></a>
             <a href="https://neovim.io"><img src="{{asset "images/88x31/neovim.gif"}}" /></a>
             <a href="https://quakeengines.github.io"><img src="{{asset "images/88x31/quake.gif"}}" /></a>
             <a href="https://www.youtube.com/user/LinusTechTips"><img src="{{asset "images/88x31/ltt.gif"}}" /></a>
             <a href="https://www.cheezit.com"><img src="{{asset "images/88x31/cheezit.gif"}}" /></a>
+            <a href="{{@site.url}}/rss/"><img src="{{asset "images/88x31/rss.gif"}}" /></a>
+            <br>
+            <br>
+            <a href="https://xn--sr8hvo.ws/previous">←</a> An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍 <a href="https://xn--sr8hvo.ws/next">→</a>
             </p>
         </footer>
     </div>
@@ -70,6 +101,7 @@
     <script src="{{asset "js/post-utils.js"}}"></script>
     <script src="{{asset "js/system-bar.js"}}"></script>
     <script src="{{asset "js/comment-overrides.js"}}"></script>
+    <script src="{{asset "js/webmentions.js"}}"></script>
     {{ghost_foot}}
 </body>
 </html>

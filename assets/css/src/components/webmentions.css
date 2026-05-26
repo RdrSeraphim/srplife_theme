@@ -1,0 +1,102 @@
+/* Webmentions Section */
+.webmentions-section {
+    border-top: 2px groove var(--cde-white);
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.webmentions-heading {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cde-title-active);
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Individual mention */
+.wm-mention {
+    background-color: var(--cde-bg);
+    border-top: 2px solid var(--cde-white);
+    border-left: 2px solid var(--cde-white);
+    border-bottom: 2px solid var(--cde-dark);
+    border-right: 2px solid var(--cde-dark);
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.wm-mention-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.wm-author-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--cde-text);
+    min-width: 0;
+}
+
+.wm-author-link:hover {
+    color: var(--cde-title-active);
+    text-decoration: underline;
+}
+
+.wm-author-photo {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    object-fit: cover;
+
+    /* CDE sunken border */
+    border-top: 2px solid var(--cde-dark);
+    border-left: 2px solid var(--cde-dark);
+    border-bottom: 2px solid var(--cde-white);
+    border-right: 2px solid var(--cde-white);
+}
+
+.wm-author-photo-fallback {
+    background-color: var(--cde-dark);
+}
+
+.wm-author-name {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wm-mention-date {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--cde-text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.wm-mention-content {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 6px;
+    color: var(--cde-text);
+}
+
+.wm-mention-source {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--cde-text-muted);
+    word-break: break-all;
+}
+
+.wm-mention-source:hover {
+    color: var(--cde-title-active);
+}
