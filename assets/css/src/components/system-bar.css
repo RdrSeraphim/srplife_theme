@@ -107,7 +107,6 @@
     border-left: 2px solid var(--cde-dark);
     border-right: 2px solid var(--cde-white);
     border-bottom: 2px solid var(--cde-white);
-    margin-left: 10px;
     cursor: default;
     min-width: 140px;
     text-align: center;
