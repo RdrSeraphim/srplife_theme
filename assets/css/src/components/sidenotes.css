@@ -16,7 +16,7 @@
     /* Start at the right edge of the content */
     margin-left: 40px;
     /* Add some spacing from the content */
-    width: 240px;
+    min-width: 240px;
     font-size: 0.85rem;
     line-height: 1.4;
     background-color: var(--cde-bg);
