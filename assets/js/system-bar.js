@@ -17,4 +17,34 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // Initialize CDE Clock
+    const clockElement = document.getElementById("cde-clock");
+    if (clockElement) {
+        function updateClock() {
+            const now = new Date();
+            const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+            const dayName = days[now.getDay()];
+            const date = now.getDate();
+            const monthName = months[now.getMonth()];
+
+            let hours = now.getHours();
+            hours = hours < 12 ? hours : hours - 12;
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            const ampm = hours < 12 ? "AM" : "PM";
+
+            // Format with leading zeros
+            hours = hours.toString().padStart(2, "0");
+            minutes = minutes.toString().padStart(2, "0");
+            seconds = seconds.toString().padStart(2, "0");
+
+            clockElement.textContent = `${dayName} ${date} ${monthName} ${hours}:${minutes}:${seconds} ${ampm}`;
+        }
+
+        updateClock(); // Initial call
+        setInterval(updateClock, 1000); // Update every second
+    }
 });

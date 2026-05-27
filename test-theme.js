@@ -148,6 +148,7 @@ async function build() {
         const indexSource = await fs.readFile("index.hbs", "utf8");
         const postSource = await fs.readFile("post.hbs", "utf8");
         const pageSource = await fs.readFile("page.hbs", "utf8");
+        const fourOhFourSource = await fs.readFile("error-404.hbs", "utf8");
 
         // Compile Helper
         const compileWithLayout = (templateSource, context) => {
@@ -252,6 +253,15 @@ ${rssItems}
 </rss>`;
 
         await fs.writeFile(path.join(OUTPUT_DIR, "rss.xml"), rssXml);
+
+        // 8. Render 404 Page
+        const fourOhFourHtml = compileWithLayout(fourOhFourSource, {
+            "@site": site,
+            body_class: "error-template",
+            rootPath: "./",
+        });
+        await fs.writeFile(path.join(OUTPUT_DIR, "404.html"), fourOhFourHtml);
+
         console.log("Build complete!");
     } catch (err) {
         console.error("Error:", err);
@@ -263,6 +273,7 @@ ${rssItems}
 async function serve() {
     const server = http.createServer((req, res) => {
         if (req.url === "/") req.url = "/index.html";
+        if (req.url === "/404") req.url = "/404.html";
 
         const filePath = path.join(OUTPUT_DIR, req.url);
         fs.readFile(filePath, (err, data) => {

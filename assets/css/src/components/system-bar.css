@@ -20,6 +20,13 @@
     align-items: center;
 }
 
+.system-bar-clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
 .system-bar-nav ul {
     list-style: none;
     padding: 0;
@@ -87,6 +94,23 @@
 .cde-system-bar-btn:hover {
     text-decoration: none;
     background-color: #c0c4d6;
+}
+
+#cde-clock {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--cde-bg);
+    color: var(--cde-text);
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
+    border-top: 2px solid var(--cde-dark);
+    border-left: 2px solid var(--cde-dark);
+    border-right: 2px solid var(--cde-white);
+    border-bottom: 2px solid var(--cde-white);
+    margin-left: 10px;
+    cursor: default;
+    min-width: 140px;
+    text-align: center;
 }
 
 /* Mobile Menu Styles */

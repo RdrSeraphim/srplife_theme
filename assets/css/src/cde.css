@@ -291,3 +291,62 @@
     border-right: 2px solid var(--cde-white);
     border-bottom: 2px solid var(--cde-white);
 }
+
+/* Terminal Emulator Extension for cde-window-content */
+.cde-terminal-content {
+    background-color: #000000;
+    color: #b2b2b2;
+    font-family: var(--font-mono);
+    min-height: 400px;
+    min-width: 350px;
+}
+
+.cde-terminal-content p {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    line-height: 0.56;
+}
+
+.cde-terminal-content .terminal-prompt-bg {
+    background-color: #5f5f87;
+    color: #ffffff;
+}
+
+.cde-terminal-content .terminal-prompt-arrow {
+    background-color: #000000;
+    color: #5f5f87;
+}
+
+.cde-terminal-content .terminal-prompt-icon {
+    background-color: #1818b2;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cde-terminal-content .terminal-link {
+    color: #b2b2b2;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.cde-terminal-content .terminal-link:hover {
+    color: #b2b2b2;
+    text-decoration: none;
+}
+
+.terminal-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
