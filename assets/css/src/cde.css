@@ -294,45 +294,51 @@
 
 /* Terminal Emulator Extension for cde-window-content */
 .cde-terminal-content {
-    background-color: #000000;
-    color: #b2b2b2;
+    background-color: #27212e;
+    color: #ffffff;
     font-family: var(--font-mono);
     min-height: 400px;
     min-width: 350px;
 }
 
 .cde-terminal-content p {
-    margin: 0 0 10px 0;
-    font-size: 12px;
-    line-height: 0.56;
+    font-size: 10.5pt;
+    margin: 0 0 10px;
+    line-height: 0.392;
 }
 
 .cde-terminal-content .terminal-prompt-bg {
-    background-color: #5f5f87;
+    background-color: #687486;
     color: #ffffff;
 }
 
 .cde-terminal-content .terminal-prompt-arrow {
-    background-color: #000000;
-    color: #5f5f87;
+    background-color: #27212e;
+    color: #687486;
 }
 
 .cde-terminal-content .terminal-prompt-icon {
-    background-color: #1818b2;
+    background-color: #40b4c4;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
 .cde-terminal-content .terminal-link {
-    color: #b2b2b2;
-    text-decoration: underline;
+    color: #ffffff;
     font-weight: normal;
 }
 
 .cde-terminal-content .terminal-link:hover {
-    color: #b2b2b2;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #40b4c4;
+    text-decoration-thickness: 1pt;
+}
+
+.cde-terminal-content .terminal-cmd {
+    color: #40b4c4 !important
 }
 
 .terminal-cursor {
