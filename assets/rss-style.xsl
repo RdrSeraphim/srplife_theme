@@ -334,7 +334,7 @@
               <div class="feed-banner">
                 <span class="feed-banner-icon">RSS</span>
                 <strong>This is a web feed,</strong> also known as an RSS feed.
-                <strong>Subscribe</strong> by copying this URL into your feed reader: <code><xsl:value-of select="/rss/channel/link" />/rss/</code>
+                <strong>Subscribe</strong> by copying this URL into your feed reader: <code><xsl:value-of select="/rss/channel/link" />rss/</code>
               </div>
 
               <xsl:for-each select="/rss/channel/item">
