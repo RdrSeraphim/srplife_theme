@@ -1,8 +1,8 @@
 # srplife_theme
 
-Theme for my Ghost blog at [srp.life](https://srp.life).
+Theme for my blog at [srp.life](https://srp.life) back when it was on Ghost. It might still work for whatever $CURRENT_VERSION of Ghost is, but I have no intention of maintaining this.
 
-The old theme can be found in the prometheus branch.
+The older Ghost theme can be found in the prometheus branch.
 
 ## Usage
 
