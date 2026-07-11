@@ -1,3 +1,5 @@
+enableGitInfo = true
+
 # Theme-level configuration for module mounts
 [[module.mounts]]
 source = "assets"

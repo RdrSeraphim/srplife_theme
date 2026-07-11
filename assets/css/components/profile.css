@@ -45,3 +45,15 @@
 .profile-social a {
     text-decoration: none;
 }
+
+.profile-git-info p {
+    font-size: 0.7rem;
+    padding-top: 20px;
+    margin-bottom: -10px;
+    text-align: center;
+    color: color-mix(in oklab, var(--cde-dark), white 20%);
+}
+
+.profile-git-info p a {
+    color: color-mix(in oklab, var(--cde-title-active), white 20%);
+}

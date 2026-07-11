@@ -3,7 +3,7 @@ features    = ["rss", "webmentions", "indieweb", "giscus"]
 homepage    = "https://github.com/RdrSeraphim/srplife_theme"
 license     = "MIT"
 licenselink = "https://github.com/RdrSeraphim/srplife_theme/blob/main/LICENSE"
-min_version = "0.128.0"
+min_version = "0.163.0"
 name        = "srplife"
 tags        = ["retro", "cde", "solaris", "blog", "personal"]
 

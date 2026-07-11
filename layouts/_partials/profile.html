@@ -16,5 +16,12 @@
 			<a href="{{ .url }}">{{ partial "icon-btn.html" (dict "name" .icon "pack" .pack) }}</a>
 		{{ end }}
 	</ul>
+
+	{{- with .GitInfo }}
+		<div class="profile-git-info">
+			<p>Last updated: {{ .CommitDate.Format "2006-01-02" }} (<a href="https://github.com/RdrSeraphim/blog/commit/{{ .Hash }}">{{ .AbbreviatedHash }}</a>)</p>
+		</div>
+	{{- end }}
+
 	{{ partial "cde-window-bottom.html" . }}
 </aside>

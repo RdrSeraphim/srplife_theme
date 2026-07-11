@@ -1,8 +1,9 @@
-baseURL   = "https://srp.life/"
-copyright = "© 2026 Rdr. Seraphim Pardee"
-locale    = "en-US"
-theme     = "srplife_theme"
-title     = "Rdr. Seraphim Pardee"
+baseURL       = "https://srp.life/"
+copyright     = "© 2026 Rdr. Seraphim Pardee"
+enableGitInfo = true
+locale        = "en-US"
+theme         = "srplife_theme"
+title         = "Rdr. Seraphim Pardee"
 
 [pagination]
 disableAliases = false
@@ -57,7 +58,7 @@ profileImage = "images/me.jpg"
     jobTitle        = "Reader (minor clergy), Software Engineer"
     nicknames       = ["srp", "xsrp", "SeraphimRP", "RdrSeraphim"]
     note            = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
-    photoURL        = "https://srp.life/content/images/size/w256h256/format/jpeg/2025/03/453064960_3021890884616733_2803591731230311694_n.jpg"
+    photoURL        = "https://srp.life/images/me.jpg"
     region          = "MI"
     regionFull      = "Michigan"
     sex             = "Male"
