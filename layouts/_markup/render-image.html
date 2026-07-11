@@ -1,0 +1,8 @@
+<figure class="kg-card kg-image-card{{ if .Text }} kg-card-hascaption{{ end }}">
+	<img src="{{ .Destination | safeURL }}" class="kg-image"{{ if .Title }} alt="{{ .Title }}"{{ end }} loading="lazy" />
+	{{ if .Text }}
+		<figcaption>
+			<span style="white-space: pre-wrap;">{{ .Text }}</span>
+		</figcaption>
+	{{ end }}
+</figure>

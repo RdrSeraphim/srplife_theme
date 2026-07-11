@@ -1,0 +1,58 @@
+{{- /*
+Ghost Gallery Card — Row
+
+Renders a single row of 1–4 images inside a kg-gallery-row div.
+Each image gets a kg-gallery-image wrapper. The flex value is set to
+"1 1 0%" as a placeholder and corrected by gallery.js on page load
+to match Ghost's aspect-ratio-based flex calculation.
+
+@param {string} src1 URL of the first image (required).
+@param {string} [src2] URL of the second image.
+@param {string} [src3] URL of the third image.
+@param {string} [src4] URL of the fourth image.
+@param {string} [alt1] Alt text for the first image.
+@param {string} [alt2] Alt text for the second image.
+@param {string} [alt3] Alt text for the third image.
+@param {string} [alt4] Alt text for the fourth image.
+
+@returns {template.HTML}
+
+@example {{< gallery-row src1="/img/a.jpg" src2="/img/b.jpg" src3="/img/c.jpg" >}}
+@example {{< gallery-row src1="/img/a.jpg" alt1="A landscape" src2="/img/b.jpg" alt2="A portrait" >}}
+*/}}
+
+{{- $src1 := .Get "src1" -}}
+{{- $src2 := .Get "src2" -}}
+{{- $src3 := .Get "src3" -}}
+{{- $src4 := .Get "src4" -}}
+{{- $alt1 := or (.Get "alt1") "" -}}
+{{- $alt2 := or (.Get "alt2") "" -}}
+{{- $alt3 := or (.Get "alt3") "" -}}
+{{- $alt4 := or (.Get "alt4") "" -}}
+
+{{- if not $src1 -}}
+	{{- errorf "The %q shortcode requires at least a src1 argument. See %s" .Name .Position -}}
+{{- end -}}
+
+<div class="kg-gallery-row">
+	{{- with $src1 }}
+		<div class="kg-gallery-image" style="flex: 1 1 0%;">
+			<img src="{{ . }}"{{ with $alt1 }} alt="{{ . }}"{{ end }}>
+		</div>
+	{{- end }}
+	{{- with $src2 }}
+		<div class="kg-gallery-image" style="flex: 1 1 0%;">
+			<img src="{{ . }}"{{ with $alt2 }} alt="{{ . }}"{{ end }}>
+		</div>
+	{{- end }}
+	{{- with $src3 }}
+		<div class="kg-gallery-image" style="flex: 1 1 0%;">
+			<img src="{{ . }}"{{ with $alt3 }} alt="{{ . }}"{{ end }}>
+		</div>
+	{{- end }}
+	{{- with $src4 }}
+		<div class="kg-gallery-image" style="flex: 1 1 0%;">
+			<img src="{{ . }}"{{ with $alt4 }} alt="{{ . }}"{{ end }}>
+		</div>
+	{{- end }}
+</div>

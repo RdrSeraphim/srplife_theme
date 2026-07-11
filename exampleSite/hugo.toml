@@ -1,0 +1,178 @@
+baseURL   = "https://srp.life/"
+copyright = "© 2026 Rdr. Seraphim Pardee"
+locale    = "en-US"
+theme     = "srplife_theme"
+title     = "Rdr. Seraphim Pardee"
+
+[pagination]
+disableAliases = false
+pagerSize      = 6
+path           = 'page'
+
+[cascade]
+    [cascade.params]
+    title = "~/404"
+    [cascade.target]
+    path = "/404"
+
+[params]
+author       = "Rdr. Seraphim Pardee"
+bio          = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
+description  = "The musings of an Orthodox Christian reader and software engineer."
+profileImage = "images/me.jpg"
+
+    [params.social]
+    twitter = "RdrSeraphim"
+    [params.social_links]
+        [params.social_links.email]
+        icon  = "mail"
+        order = 1
+        pack  = "lucide"
+        url   = "mailto:me@srp.life"
+        [params.social_links.discord]
+        icon  = "discord"
+        order = 2
+        pack  = "simpleicons"
+        url   = "https://discord.com/users/186046294286925824"
+        [params.social_links.github]
+        icon  = "github"
+        order = 3
+        pack  = "simpleicons"
+        url   = "https://github.com/rdrseraphim"
+        [params.social_links.linkedin]
+        icon  = "linkedin"
+        order = 4
+        pack  = "simpleicons"
+        url   = "https://www.linkedin.com/in/srpx"
+
+    [params.indieweb]
+    additionalName  = "R."
+    birthday        = "1998-08-25"
+    country         = "United States of America"
+    emails          = ["me@srp.life", "srp@kerygma.digital"]
+    familyName      = "Pardee"
+    fullName        = "Rdr. Seraphim Pardee"
+    givenName       = "Seraphim"
+    honorificPrefix = "Rdr."
+    jobTitle        = "Reader (minor clergy), Software Engineer"
+    nicknames       = ["srp", "xsrp", "SeraphimRP", "RdrSeraphim"]
+    note            = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
+    photoURL        = "https://srp.life/content/images/size/w256h256/format/jpeg/2025/03/453064960_3021890884616733_2803591731230311694_n.jpg"
+    region          = "MI"
+    regionFull      = "Michigan"
+    sex             = "Male"
+    url             = "https://srp.life"
+
+    [params.giscus]
+    # Fill these in with your own Giscus configuration
+    # See https://giscus.app for setup instructions
+    category         = "Comments"
+    categoryId       = "DIC_kwDOTSvrT84DA3SM"
+    emitMetadata     = "0"
+    inputPosition    = "top"
+    lang             = "en"
+    loading          = "lazy"
+    mapping          = "og:title"
+    reactionsEnabled = "1"
+    repo             = "rdrseraphim/rdrseraphim.github.io"
+    repoId           = "R_kgDOTSvrTw"
+
+    [params.webmention]
+    pingbackURL   = "https://webmention.io/srp.life/xmlrpc"
+    webmentionURL = "https://webmention.io/srp.life/webmention"
+
+[[menus.main]]
+name   = "Home"
+url    = "/"
+weight = 1
+
+[[menus.main]]
+name   = "About"
+url    = "/about/"
+weight = 2
+
+[[menus.main]]
+name   = "Resources"
+url    = "/resources/"
+weight = 3
+
+[taxonomies]
+tag = "t"
+
+[permalinks]
+pages = "/:slug/"
+posts = "/:slug/"
+
+[markup]
+    [markup.highlight]
+    noClasses = false
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+        unsafe = true
+        [markup.goldmark.parser]
+        wrapStandAloneImageWithinParagraph = false
+        [markup.goldmark.extensions]
+        strikethrough = false
+            [markup.goldmark.extensions.extras]
+                [markup.goldmark.extensions.extras.subscript]
+                enable = true
+                [markup.goldmark.extensions.extras.superscript]
+                enable = true
+                [markup.goldmark.extensions.extras.insert]
+                enable = true
+                [markup.goldmark.extensions.extras.mark]
+                enable = true
+                [markup.goldmark.extensions.extras.delete]
+                enable = true
+
+[outputs]
+home     = ['html', 'rss']
+rss      = ['rss']
+section  = ['html', 'rss']
+taxonomy = ['html', 'rss']
+term     = ['html', 'rss']
+
+[outputFormats]
+    [outputFormats.RSS]
+    baseName = "feed"
+
+[minify]
+disableCSS   = false
+disableHTML  = false
+disableJS    = false
+disableJSON  = false
+disableSVG   = false
+disableXML   = false
+minifyOutput = false
+    [minify.tdewolff]
+        [minify.tdewolff.css]
+        precision = 0
+        version   = 0
+        [minify.tdewolff.html]
+        keepComments        = false
+        keepDefaultAttrVals = true
+        keepDocumentTags    = true
+        keepEndTags         = true
+        keepQuotes          = false
+        keepSpecialComments = false
+        keepWhitespace      = false
+        [minify.tdewolff.js]
+        keepVarNames = false
+        precision    = 0
+        version      = 2022
+        [minify.tdewolff.json]
+        keepNumbers = false
+        precision   = 0
+        [minify.tdewolff.svg]
+        keepComments   = false
+        keepNamespaces = ['', 'x-bind']
+        precision      = 0
+        [minify.tdewolff.xml]
+        keepWhitespace = false
+
+[server]
+    [[server.headers]]
+    for = '**.css'
+        [server.headers.values]
+        Access-Control-Allow-Origin          = '*'
+        Access-Control-Allow-Private-Network = 'true'

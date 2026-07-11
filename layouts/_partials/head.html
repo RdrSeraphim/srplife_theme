@@ -1,0 +1,28 @@
+{{- /* Partial: head.html — <head> content */ -}}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else if .IsPage }}{{ .Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}" />
+{{ $opts := dict "inlineImports" true }}
+{{- with resources.Get "css/main.css" -}}
+	{{- if hugo.IsDevelopment -}}
+		{{- with . | css.PostCSS $opts }}
+			<link rel="stylesheet" href="{{ .RelPermalink }}" />
+		{{- end -}}
+	{{- else -}}
+		{{- with . | css.PostCSS $opts | minify | fingerprint }}
+			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+		{{- end -}}
+	{{- end }}
+{{ end }}
+
+{{- /* Webmention / IndieWeb Discovery */ -}}
+{{- with .Site.Params.webmention }}
+	<link rel="webmention" href="{{ .webmentionURL }}" />
+	<link rel="pingback" href="{{ .pingbackURL }}" />
+{{- end }}
+
+{{- /* RSS autodiscovery */ -}}
+{{- range .AlternativeOutputFormats }}
+	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink (printf "%s - %s" $.Site.Title .Name) | safeHTML }}
+{{- end -}}

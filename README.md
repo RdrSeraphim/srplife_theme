@@ -1,8 +1,8 @@
 # srplife_theme
 
-Theme for my Ghost blog at [srp.life](https://srp.life).
+Theme for my blog at [srp.life](https://srp.life) running on hugo. You can find the content repo [here](https://github.com/RdrSeraphim/rdrseraphim.github.io).
 
-The old theme can be found in the prometheus branch.
+The old Ghost theme can be found in the `ghost` branch. The even older Ghost theme can be found in the `prometheus` branch.
 
 ## Usage
 

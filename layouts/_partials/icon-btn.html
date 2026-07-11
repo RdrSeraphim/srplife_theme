@@ -1,0 +1,22 @@
+{{/* layouts/partials/icon-btn.html */}}
+{{ $iconName := .name }}
+{{ $pack := .pack | default "lucide" }}
+
+{{ $path := "" }}
+{{ $class := "" }}
+{{ if eq $pack "simpleicons" }}
+	{{ $path = printf "icons/simpleicons/%s.svg" $iconName }}
+	{{ $class = printf "si si-%s" $iconName }}
+{{ else }}
+	{{ $path = printf "icons/lucide/%s.svg" $iconName }}
+	{{ $class = printf "icon-%s" $iconName }}
+{{ end }}
+
+{{ $icon := resources.Get $path }}
+{{ if $icon }}
+	<i class="cde-btn cde-icon-btn {{ $class }}">
+		{{ $icon.Content | safeHTML }}
+	</i>
+{{ else }}
+	{{ warnf "Icon '%s' in pack '%s' not found at assets/%s" $iconName $pack $path }}
+{{ end }}

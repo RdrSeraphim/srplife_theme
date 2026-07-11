@@ -1,0 +1,33 @@
+{{- /*
+Ghost Gallery Card — Outer Wrapper
+
+Renders the <figure> wrapper with Ghost's gallery classes and an optional
+<figcaption>. The caption is passed as the "caption" named parameter.
+
+@param {string} [caption] Optional caption text for the gallery.
+
+@returns {template.HTML}
+
+@example {{< gallery >}}
+           {{< gallery-row src1="/img/a.jpg" src2="/img/b.jpg" >}}
+         {{< /gallery >}}
+
+@example {{< gallery caption="A description of the gallery." >}}
+           {{< gallery-row src1="/img/a.jpg" src2="/img/b.jpg" >}}
+         {{< /gallery >}}
+*/}}
+
+{{- $caption := .Get "caption" -}}
+
+<figure class="kg-card kg-gallery-card kg-width-wide{{ with $caption }} kg-card-hascaption{{ end }}">
+	<div class="kg-gallery-container">
+		{{ .Inner }}
+	</div>
+	{{- with $caption }}
+		<figcaption>
+			<p>
+				<span style="white-space: pre-wrap;">{{ . | markdownify }}</span>
+			</p>
+		</figcaption>
+	{{- end }}
+</figure>

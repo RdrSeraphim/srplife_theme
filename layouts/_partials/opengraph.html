@@ -1,0 +1,34 @@
+<meta property="og:url" content="{{ .Permalink }}">
+
+{{- with or site.Title site.Params.title | plainify }}
+	<meta property="og:site_name" content="{{ . }}">
+{{- end }}
+
+{{- with or .Title site.Title site.Params.title | plainify }}
+	<meta property="og:title" content="{{ . }}">
+{{- end }}
+
+{{- with or .Description .Summary site.Params.description | plainify | htmlUnescape }}
+	<meta property="og:description" content="{{ trim . "\n\r\t " }}">
+{{- end }}
+
+{{- with or .Params.locale site.Language.Locale }}
+	<meta property="og:locale" content="{{ replace . `-` `_` }}">
+{{- end }}
+
+{{- if and .IsPage (and (eq .Section "posts") (eq .Draft false)) }}
+	{{- with .Params.cover }}
+		<meta property="og:image" content="{{ strings.TrimSuffix "/" $.Page.Permalink }}{{ . }}">
+	{{- end }}
+	<meta property="og:type" content="article">
+	{{- $ISO8601 := "2006-01-02T15:04:05-07:00" }}
+	{{- with .PublishDate }}
+		<meta property="article:published_time" {{ .Format $ISO8601 | printf "content=%q" | safeHTMLAttr }}>
+	{{- end }}
+	{{- range .GetTerms "t" | first 6 }}
+		<meta property="article:tag" content="{{ .Page.Title | plainify }}">
+	{{- end }}
+{{- else }}
+	<meta property="og:type" content="website">
+{{- end }}
+

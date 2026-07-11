@@ -1,0 +1,41 @@
+{{- /* Partial: giscus.html — Giscus comment widget (GitHub Discussions-backed) */ -}}
+{{ with .Site.Params.giscus }}
+	{{ if .repo }}
+		<section class="comments-section" id="giscus-container">
+			{{- $giscusCSS := resources.Get "css/components/giscus.css" -}}
+			{{- $themeUrl := "" -}}
+			{{- if $giscusCSS -}}
+				{{- $opts := dict "inlineImports" true -}}
+				{{- if hugo.IsDevelopment -}}
+					{{- with $giscusCSS | css.PostCSS $opts | fingerprint -}}
+						{{- $themeUrl = .RelPermalink -}}
+					{{- end -}}
+				{{- else -}}
+					{{- with $giscusCSS | css.PostCSS $opts | minify | fingerprint -}}
+						{{- $themeUrl = .RelPermalink -}}
+					{{- end -}}
+				{{- end -}}
+			{{- end -}}
+			<script>
+				(function() {
+					const script = document.createElement('script');
+					script.src = 'https://giscus.app/client.js';
+					script.setAttribute('data-repo', '{{ .repo }}');
+					script.setAttribute('data-repo-id', '{{ .repoId }}');
+					script.setAttribute('data-category', '{{ .category }}');
+					script.setAttribute('data-category-id', '{{ .categoryId }}');
+					script.setAttribute('data-mapping', '{{ .mapping | default "pathname" }}');
+					script.setAttribute('data-strict', '0');
+					script.setAttribute('data-reactions-enabled', '{{ .reactionsEnabled | default "1" }}');
+					script.setAttribute('data-emit-metadata', '{{ .emitMetadata | default "0" }}');
+					script.setAttribute('data-input-position', '{{ .inputPosition | default "top" }}');
+					script.setAttribute('data-theme', window.location.origin + '{{ $themeUrl }}');
+					script.setAttribute('data-lang', '{{ .lang | default "en" }}');
+					script.setAttribute('crossorigin', 'anonymous');
+					script.async = true;
+					document.getElementById('giscus-container').appendChild(script);
+				})();
+			</script>
+		</section>
+	{{ end }}
+{{ end }}

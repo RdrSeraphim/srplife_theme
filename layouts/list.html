@@ -1,0 +1,54 @@
+{{ define "main" }}
+<div class="container home-layout">
+
+	{{- /* Left Column: Profile Window */ -}}
+	{{- $profilePicture := .Site.Params.profileImage | default "" }}
+	{{- $profileTitle := .Site.Title | default "" }}
+	{{- $profileBio := .Site.Params.bio | default "" }}
+	{{- $profileSocial := .Site.Params.social_links | default (slice) }}
+	{{ partial "profile.html" (dict "profilePicture" $profilePicture "profileTitle" $profileTitle "profileBio" $profileBio "profileSocial" $profileSocial) }}
+
+
+	{{- /* Right Column: Post List Window */ -}}
+	<main class="post-column h-feed">
+		{{ partial "cde-window-top.html" (dict "title" (printf "~/???/%s" (.Title | urlize)) "style" "min-height: 80vh;") }}
+		{{ $posts := where (where .RegularPages "Section" "posts") "Draft" false }}
+		{{ range $p := (.Paginate $posts).Pages }}
+			<article class="post-list-item h-entry">
+				{{ with $url := .Params.cover }}
+					<a href="{{ $p.RelPermalink }}" class="post-card-image-link">
+						{{- if strings.HasPrefix $url "http" }}
+							<img class="post-feature-image" src="{{ $url }}" alt="{{ $.Title }}" />
+						{{- else }}
+							<img class="post-feature-image" src="{{ $p.RelPermalink | strings.TrimSuffix "/" }}{{ $url }}" alt="{{ $.Title }}" />
+						{{- end }}
+					</a>
+				{{ end }}
+
+				<div class="post-card-content">
+					<header>
+						<h2 class="post-title p-name"><a href="{{ $p.RelPermalink }}" class="u-url">{{ $p.Title }}</a></h2>
+						<div class="post-meta">
+							<time class="dt-published" datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2 January 2006" }}</time>
+							{{- with (index ($p.GetTerms "t") 0) }} in <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+							(<span class="reading-time">{{ $p.ReadingTime }} minute read</span>)
+						</div>
+					</header>
+
+					<section class="post-excerpt p-summary">
+						<p>
+							{{ $p.Summary }}
+							<br />
+							<br />
+							<a href="{{ $p.RelPermalink }}">Read More</a>
+						</p>
+					</section>
+				</div>
+			</article>
+		{{ end }}
+
+		{{ partial "pagination.html" . }}
+		{{ partial "cde-window-bottom.html" . }}
+	</main>
+</div>
+{{ end }}

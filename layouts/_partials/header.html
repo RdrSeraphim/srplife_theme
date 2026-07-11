@@ -1,0 +1,18 @@
+{{- /* Partial: header.html — CDE System Bar */ -}}
+<div class="cde-system-bar">
+	<button id="system-bar-menu-toggle" class="cde-system-bar-btn mobile-only" aria-label="Menu">Menu <span class="cde-menu-icon">▼</span></button>
+	<div class="system-bar-content">
+		<div class="system-bar-nav">
+			<ul class="nav">
+				{{ range .Site.Menus.main }}
+					<li>
+						<a href="{{ .URL }}" class="cde-system-bar-btn{{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+					</li>
+				{{ end }}
+			</ul>
+		</div>
+		<div class="system-bar-clock">
+			<div id="cde-clock"></div>
+		</div>
+	</div>
+</div>

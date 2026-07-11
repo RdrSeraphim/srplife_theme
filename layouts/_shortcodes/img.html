@@ -1,0 +1,32 @@
+{{- /*
+Creates an image figure.
+
+@param {string} [src] The image URL. Optional if the URL is the first and only positional argument.
+@param {string} [alt] The alternative text for the image.
+@param {string} [width] The width of the image.
+@param {string} [height] The height of the image.
+
+@returns {template.HTML}
+
+@example {{% img /images/image.jpg %}}Caption here.{{% /img %}}
+@example {{% img src="/images/image.jpg" alt="Image caption" %}}Caption here.{{% /img %}}
+*/}}
+
+{{- with $src := or (.Get "src") (.Get 0) }}
+	{{- $alt := or (.Get "alt") "" }}
+	{{- $width := or (.Get "width") "" }}
+	{{- $height := or (.Get "height") "" }}
+
+	{{- /* Render. */ -}}
+	<figure class="kg-card kg-image-card{{ if $.Inner }} kg-card-hascaption{{ end }}">
+		<img src="{{ $src }}" class="kg-image"
+			{{- with $width }}width="{{ . }}" {{- end }} 
+			{{- with $height }}height="{{ . }}"{{- end }}
+			{{- with $alt }}alt="{{ . }}"{{- end }} loading="lazy" />
+		{{ with .Inner }}
+			<figcaption><span style="white-space: pre-wrap;">{{ . | markdownify }}</span></figcaption>
+		{{ end }}
+	</figure>
+{{- else }}
+	{{- errorf "The %q shortcode requires a src argument. See %s" .Name .Position }}
+{{- end }}

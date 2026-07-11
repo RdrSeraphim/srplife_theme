@@ -1,0 +1,20 @@
+<aside class="profile-column">
+	{{ partial "cde-window-top.html" (dict "title" "~") }}
+	{{ if .profilePicture }}
+		<img src="{{ .profilePicture | relURL }}" alt="{{ .profileTitle }}" class="profile-photo">
+	{{ else }}
+		<div class="profile-photo" style="height: 200px; display: flex; align-items: center; justify-content: center; background: #ddd;">
+			<span>No Photo</span>
+		</div>
+	{{ end }}
+
+	<h2 class="profile-name">{{ .profileTitle }}</h2>
+	<div class="profile-bio">{{ .profileBio }}</div>
+
+	<ul class="profile-social">
+		{{ range sort .profileSocial "order" }}
+			<a href="{{ .url }}">{{ partial "icon-btn.html" (dict "name" .icon "pack" .pack) }}</a>
+		{{ end }}
+	</ul>
+	{{ partial "cde-window-bottom.html" . }}
+</aside>

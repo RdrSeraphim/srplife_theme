@@ -1,0 +1,25 @@
+{{- with .Site.Params.indieweb -}}
+	<div style="display: none" class="h-card vcard">
+		<span class="p-name fn">{{ .fullName }}</span>
+		<span class="p-honorific-prefix title">{{ .honorificPrefix }}</span>
+		<span class="p-given-name given-name">{{ .givenName }}</span>
+		<span class="p-additional-name">{{ .additionalName }}</span>
+		<span class="p-family-name family-name">{{ .familyName }}</span>
+		{{- range .nicknames }}
+			<span class="p-nickname nickname">{{ . }}</span>
+		{{- end }}
+		<span class="p-job-title title">{{ .jobTitle }}</span>
+		<img class="u-photo photo" src="{{ .photoURL }}" />
+		<a class="u-url url" href="{{ .url }}">web</a>
+		{{- range .emails }}
+			<a class="u-email email" href="mailto:{{ . }}">{{ . }}</a>
+		{{- end }}
+		<span class="p-note note">{{ .note }}</span>
+		<div class="p-adr h-adr">
+			<span class="p-region" title="{{ .regionFull }}">{{ .region }}</span>
+			<span class="p-country-name">{{ .country }}</span>
+		</div>
+		<time class="dt-bday">{{ .birthday }}</time>
+		<span class="p-sex p-gender-identity">{{ .sex }}</span>
+	</div>
+{{- end }}

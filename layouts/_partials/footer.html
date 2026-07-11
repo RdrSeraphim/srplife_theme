@@ -1,0 +1,26 @@
+{{- /* Partial: footer.html — Footer with credits and badges */ -}}
+<footer>
+	<p>
+		&copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		<br />
+		<br />
+		Published with <a href="https://gohugo.io">Hugo</a>
+		<br />
+		<a href="https://github.com/RdrSeraphim/srplife_theme">Theme</a> inspired by <a href="https://www.opencode.net/phob1an/commonality">Commonality Sol</a>
+		<br />
+		<br />
+		<a href="https://archlinux.org"><img src="{{ "images/88x31/archlinux.gif" | relURL }}" /></a>
+		<img src="{{ "images/88x31/16bit.gif" | relURL }}" />
+		<a href="https://brave.com/origin/"><img src="{{ "images/88x31/braveorigin.gif" | relURL }}" /></a>
+		<a href="https://discord.gg/t3EKzAu9ed"><img src="{{ "images/88x31/discord.gif" | relURL }}" /></a>
+		<a href="https://neovim.io"><img src="{{ "images/88x31/neovim.gif" | relURL }}" /></a>
+		<br />
+		<a href="https://quakeengines.github.io"><img src="{{ "images/88x31/quake.gif" | relURL }}" /></a>
+		<a href="https://www.youtube.com/user/LinusTechTips"><img src="{{ "images/88x31/ltt.gif" | relURL }}" /></a>
+		<a href="https://www.cheezit.com"><img src="{{ "images/88x31/cheezit.gif" | relURL }}" /></a>
+		<a href="{{ "feed.xml" | absURL }}"><img src="{{ "images/88x31/rss.gif" | relURL }}" /></a>
+		<br />
+		<br />
+		<a href="https://xn--sr8hvo.ws/previous">←</a> An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍 <a href="https://xn--sr8hvo.ws/next">→</a>
+	</p>
+</footer>

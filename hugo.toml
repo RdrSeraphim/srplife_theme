@@ -1,0 +1,20 @@
+# Theme-level configuration for module mounts
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
+
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[[module.mounts]]
+source = "node_modules/simple-icons/icons"
+target = "assets/icons/simpleicons"
+
+[[module.mounts]]
+source = "node_modules/lucide-static/icons"
+target = "assets/icons/lucide"

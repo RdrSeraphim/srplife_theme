@@ -1,0 +1,8 @@
+{{- with $text := or ($.Inner) (.Get 0) -}}
+	<div class="kg-card kg-callout-card kg-callout-card-grey">
+		{{- if $.Get "emoji" }}<div class="kg-callout-emoji">{{ $.Get "emoji" }}</div>{{ end }}
+		<div class="kg-callout-content">{{ $text | markdownify }}</div>
+	</div>
+{{- else -}}
+	{{- errorf "The %q shortcode requires a caption argument. See %s" .Name .Position -}}
+{{- end -}}

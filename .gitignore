@@ -1,5 +1,14 @@
 node_modules/
 build/
-dist/ 
 reference_material/
-preview/
+exampleSite/public/
+exampleSite/resources/
+exampleSite/content/**/*.md
+!exampleSite/content/_index.md
+.hugo_build.lock
+
+exampleSite/content/**/*.jpg
+exampleSite/content/**/*.jpeg
+exampleSite/content/**/*.png
+exampleSite/content/**/*.gif
+exampleSite/content/**/*.webp

@@ -1,10 +1,28 @@
 {
     "editor.formatOnSave": true,
-    "[handlebars]": {
-        "editor.wordWrapColumn": 200,
-        "editor.defaultFormatter": "mohd-akram.vscode-html-format"
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on",
+        "other": "on"
+    },
+    "[html]": {
+        "editor.wordWrapColumn": 400,
+        "editor.defaultFormatter": "gohugoio.gotmplfmt"
     },
     "[css]": {
         "editor.suggest.insertMode": "replace"
-    }
+    },
+    "[toml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        "*.html": "go-template"
+    },
+    "[go-template]": {
+        "editor.defaultFormatter": "gohugoio.gotmplfmt",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
+    },
+    "css.validate": false
 }

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+	<head>
+		{{ partial "head.html" . }}
+		{{ partial "opengraph.html" . }}
+		{{ partial "twitter_cards.html" . }}
+	</head>
+
+	<body class="{{ with .Type }}{{ . }}{{ end }}">
+		{{ partial "hcard.html" . }}
+		{{ partial "header.html" . }}
+
+		<div class="viewport">
+			{{ block "main" . }}{{ end }}
+
+			{{ partial "footer.html" . }}
+		</div>
+
+		{{- /* Scripts */ -}}
+        <script src="{{ "js/sidenotes.js" | relURL }}"></script>
+        <script src="{{ "js/post-utils.js" | relURL }}"></script>
+        <script src="{{ "js/system-bar.js" | relURL }}"></script>
+        <script src="{{ "js/webmentions.js" | relURL }}"></script>
+        <script src="{{ "js/gallery.js" | relURL }}"></script>
+	</body>
+</html>
