@@ -15,11 +15,11 @@
 {{- with or .Params.locale site.Language.Locale }}
 	<meta property="og:locale" content="{{ replace . `-` `_` }}">
 {{- end }}
+{{- with .Params.cover }}
+	<meta property="og:image" content="{{ strings.TrimSuffix "/" $.Page.Permalink }}{{ . }}">
+{{- end }}
 
-{{- if and .IsPage (and (eq .Section "posts") (eq .Draft false)) }}
-	{{- with .Params.cover }}
-		<meta property="og:image" content="{{ strings.TrimSuffix "/" $.Page.Permalink }}{{ . }}">
-	{{- end }}
+{{- if .IsPage }}
 	<meta property="og:type" content="article">
 	{{- $ISO8601 := "2006-01-02T15:04:05-07:00" }}
 	{{- with .PublishDate }}
