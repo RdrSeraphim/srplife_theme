@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/compare/v2.1.2..v3.0.0) - 2026-07-11
+
+### 🚀 Features
+
+- Integrate Webmentions, add h-entry markup, and implement custom RSS XSLT styling ([0d628ca](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/0d628ca55b29315e91b04b7d4f35d758e81a2313))
+- Implement CDE-style clock widget and 404 error page, and update development task status in IDEAS.md ([22eb680](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/22eb68062cc480115124c76b7603f71d4bb0a526))
+- Add better-looking fonts, if people have 'em. ([a63d3b2](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/a63d3b21832b44298a690f0753ee81bc5ff3da11))
+- Add more 88x31s ([b70ddcd](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/b70ddcde494d2c3cde83c45852c33eba778020a6))
+- [**breaking**] Hugo! ([6335e3a](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/6335e3a15952b946098c50805b62abde1d7b6271))
+
+### 🔧 Fixes
+
+- Use min-width for sidenotes so longer links don't overflow the space ([58e00c0](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/58e00c062ffe0c1c0ff61ce8feee37e559af8beb))
+- Terminal colors, positioning ([1c8baec](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/1c8baece5805a64b4295535278e6c5a82e52f8be))
+- Add link to firefox 88x31 ([c1be638](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/c1be638b28d5b147a512dd6494218822b58c94d8))
+- Rss-style link reference ([74e711a](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/74e711ae4674c3a1f3578de5d192a7e306389058))
+
+### 🚜 Refactor
+
+- Decouple system bar styles into a dedicated component file and remove main CSS import ([0d2b606](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/-/commit/0d2b60680d81be16a2d48831cf2ffc86700ce915))
+
 ## [2.1.2](https://gitlab.com/kerygmadigital/BibleBot/BibleBot/compare/v2.1.0..v2.1.2) - 2026-02-28
 
 ### 🔧 Fixes
