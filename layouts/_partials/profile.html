@@ -20,6 +20,14 @@
 	{{- with .GitInfo }}
 		<div class="profile-git-info">
 			<p>Last updated: {{ .CommitDate.Format "2006-01-02" }} (<a href="https://github.com/RdrSeraphim/blog/commit/{{ .Hash }}">{{ .AbbreviatedHash }}</a>)</p>
+			{{- range hugo.Deps }}
+				{{- if eq .Path "github.com/rdrseraphim/srplife_theme/v3" }}
+					{{- $isPseudo := strings.Contains .Version "-" }}
+					{{- $parts := split .Version "-" }}
+					{{- $hash := index $parts (sub (len $parts) 1) }}
+					<p>Theme: <a href="https://github.com/rdrseraphim/srplife_theme/{{ if $isPseudo }}commit/{{ $hash }}{{ else }}releases/tag/{{ .Version }}{{ end }}">{{ if $isPseudo }}{{ $hash }}{{ else }}{{ .Version }}{{ end }}</a></p>
+				{{- end }}
+			{{- end }}
 		</div>
 	{{- end }}
 
