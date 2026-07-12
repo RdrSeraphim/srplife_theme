@@ -16,7 +16,7 @@
 	<meta property="og:locale" content="{{ replace . `-` `_` }}">
 {{- end }}
 {{- with .Params.cover }}
-    {{- if strings.HasSuffix . "http" .}}
+    {{- if strings.HasSuffix . "http" }}
     <meta property="og:image" content="{{ . }}">
     {{- else }}
 	<meta property="og:image" content="{{ strings.TrimSuffix "/" $.Page.Permalink }}{{ . }}">
