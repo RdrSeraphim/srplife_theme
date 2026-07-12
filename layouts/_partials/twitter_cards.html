@@ -1,6 +1,10 @@
 {{- with .Params.cover }}
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="{{ strings.TrimSuffix "/" $.Page.Permalink }}{{ . }}">
+    {{- if strings.HasSuffix . "http" }}
+    <meta name="twitter:image" content="{{ . }}">
+    {{- else }}
+    <meta name="twitter:image" content="{{ strings.TrimSuffix "/" $.Page.Permalink }}{{ . }}">
+    {{- end }}
 {{- else }}
 	<meta name="twitter:card" content="summary">
 {{- end }}
