@@ -62,7 +62,7 @@ profileImage = "images/me.jpg"
     region          = "MI"
     regionFull      = "Michigan"
     sex             = "Male"
-    url             = "https://srp.life"
+    urls            = ['acct:blog@srp.life', 'acct:srp@defcon.social', 'https://defcon.social/@srp']
 
     [params.giscus]
     # Fill these in with your own Giscus configuration
