@@ -10,7 +10,7 @@
 		{{- end }}
 		<span class="p-job-title title">{{ .jobTitle }}</span>
 		<img class="u-photo photo" src="{{ .photoURL }}" />
-		<a class="u-url url" href="/"></a>
+		<a class="u-url url" rel="me" href="/"></a>
         <a class="u-url url" href="acct:blog@srp.life"></a>
 		{{- range .emails }}
 			<a class="u-email email" href="mailto:{{ . }}">{{ . }}</a>
