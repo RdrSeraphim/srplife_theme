@@ -12,7 +12,7 @@
 		<img class="u-photo photo" src="{{ .photoURL }}" />
 		<a class="u-url url" rel="me" href="/"></a>
         {{- range .urls }}
-            <a class="u-url url" rel="me" href="{{ . }}"></a>
+            <a class="u-url url" rel="me" href="{{ . | safeURL }}"></a>
         {{- end }}
 		{{- range .emails }}
 			<a class="u-email email" href="mailto:{{ . }}">{{ . }}</a>
