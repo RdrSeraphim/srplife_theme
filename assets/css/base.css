@@ -108,3 +108,33 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+table {
+    background-color: var(--cde-bg);
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #646875;
+    border-bottom: 2px solid #646875;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+thead {
+    text-align: center;
+    border-top: 2px solid #646875;
+    border-left: 2px solid #646875;
+    border-right: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+tbody tr td {
+    padding: 10px;
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #646875;
+    border-bottom: 2px solid #646875;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+tbody tr td:hover {
+    background-color: var(--cde-light);
+}
