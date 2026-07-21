@@ -66,12 +66,17 @@
 }
 
 /* Terminal Emulator Extension */
+.wm-window-content:has(.wm-terminal-content) {
+    padding: none;
+}
+
 .wm-terminal-content {
     background-color: var(--cm-base);
     color: var(--cm-text);
     font-family: var(--font-mono);
-    min-height: 400px;
-    min-width: 350px;
+    min-height: 100%;
+    min-width: 100%;
+    padding: 25px 0px 0px 1px;
 }
 
 .wm-terminal-content p {
@@ -81,19 +86,21 @@
 }
 
 .wm-terminal-content .terminal-prompt-bg {
-    background-color: #687486;
-    color: #bac2de;
+    background-color: #5F5F87;
+    color: var(--cm-subtext0);
     font-weight: bold;
 }
 
 .wm-terminal-content .terminal-prompt-arrow {
-    background-color: var(--cm-mantle);
-    color: #687486;
+    background-color: var(--cm-base);
+    color: #5F5F87;
 }
 
 .wm-terminal-content .terminal-prompt-icon {
     background-color: var(--cm-blue);
     color: var(--cm-base);
+    width: 100%;
+    text-align: center;
     text-decoration: none;
     font-weight: bold;
 }
@@ -120,6 +127,7 @@
 }
 
 @keyframes blink {
+
     0%,
     100% {
         opacity: 1;
