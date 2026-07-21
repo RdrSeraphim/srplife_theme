@@ -7,7 +7,6 @@
     position: relative;
     border: 2px solid var(--wm-border-unfocused);
     padding: 0;
-    transition: border-color 0.15s ease;
 }
 
 .wm-window:hover {
