@@ -1,25 +1,15 @@
 # srplife_theme
 
-Theme for my blog at [srp.life](https://srp.life) running on hugo. You can find the content repo [here](https://github.com/RdrSeraphim/rdrseraphim.github.io).
+A Hugo theme for my blog at [srp.life](https://srp.life). You can find the content repo [here](https://github.com/RdrSeraphim/blog).
 
-The old Ghost theme can be found in the `ghost` branch. The even older Ghost theme can be found in the `prometheus` branch.
+The old CDE theme can be found in the `cde` branch. The old Ghost theme can be found in the `ghost` branch. The even older Ghost theme can be found in the `prometheus` branch.
 
 ## Usage
 
-Clone the repo, `npm install`, then `npm run zip`. Upload `dist/srplife.zip` to Ghost. ???. Profit.
+In your Hugo repo, run `hugo mod add github.com/RdrSeraphim/srplife_theme/v4`, then in your `hugo.toml` file, set `theme = "github.com/RdrSeraphim/srplife_theme/v4"`.
 
-## Development
+If an update is available, run `hugo mod get -u && hugo mod tidy`.
 
-There's a handful of options to help with development.
+## Local Preview
 
-### Preview
-
-`npm run preview` will build the theme with the contents of a Ghost export file, generating a preview of the theme in the `preview` directory. You can open `preview/index.html` in your browser to see the theme in action, albeit with some broken images, links, and some Ghost-specific markup that doesn't render.
-
-It's enough to avoid running a local Ghost instance just for the sake of testing.
-
-### CSS
-
-`npm run build:css` will build the CSS from the SCSS files in `assets/css/src` and output it to `assets/css/screen.css`. `npm run dev:css` will do the same, but watch for changes and rebuild on the fly.
-
-
+`npm run dev` will build the theme using the `exampleSite` folder for content. You can open `http://localhost:8787` in your browser to see the theme in action.
