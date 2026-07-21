@@ -20,7 +20,7 @@
 
 			<section class="gh-content">{{ .Content }}</section>
 
-			{{ with $.Site.Params.contentRepo }}
+			{{ with site.Params.contentRepo }}
 				<div class="post-meta" style="margin-top: 20px;">
 					<a href="{{ . }}/blob/main/content/pages/{{ $.File.ContentBaseName }}.md" class="post-src-link">[src]</a>
 				</div>

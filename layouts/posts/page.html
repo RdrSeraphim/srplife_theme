@@ -31,7 +31,7 @@
 							</span>
 						{{- end }}
 						({{ .ReadingTime }} minute read)
-						{{ with $.Site.Params.contentRepo }}
+						{{ with site.Params.contentRepo }}
 							<a href="{{ . }}/blob/main/content/posts/{{ printf "%s/%s/index.md" ($.Date.Format "2006/01/02") $.File.ContentBaseName }}" class="post-src-link">[src]</a>
 						{{ end }}
 					</section>

@@ -19,7 +19,7 @@
 
 	{{- with .GitInfo }}
 		<div class="profile-git-info">
-			<p>Last updated: {{ .CommitDate.Format "2006-01-02" }} ({{ with $.Site.Params.contentRepo }}<a href="{{ . }}/commit/{{ $.GitInfo.Hash }}">{{ $.GitInfo.AbbreviatedHash }}</a>{{ else }}{{ .AbbreviatedHash }}{{ end }})</p>
+			<p>Last updated: {{ .CommitDate.Format "2006-01-02" }} ({{ with site.Params.contentRepo }}<a href="{{ . }}/commit/{{ $.GitInfo.Hash }}">{{ $.GitInfo.AbbreviatedHash }}</a>{{ else }}{{ .AbbreviatedHash }}{{ end }})</p>
 		</div>
 	{{- end }}
 
