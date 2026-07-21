@@ -8,6 +8,7 @@
   - Widgets: Flat, minimal
 */
 
+@import "fonts.css";
 @import "settings.css";
 @import "base.css";
 @import "layout.css";

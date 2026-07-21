@@ -1,0 +1,131 @@
+/* PragmataPro (Proportional) - Ligatures */
+@font-face {
+  font-family: 'PragmataPro Patched Liga';
+  src: url('/fonts/PragmataProR_liga_0903_patch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched Liga';
+  src: url('/fonts/PragmataProI_liga_0903_patch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched Liga';
+  src: url('/fonts/PragmataProB_liga_0903_patch.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched Liga';
+  src: url('/fonts/PragmataProZ_liga_0903_patch.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* PragmataPro (Proportional) - Non-Ligature */
+@font-face {
+  font-family: 'PragmataPro Patched';
+  src: url('/fonts/PragmataProR_0903_patch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched';
+  src: url('/fonts/PragmataProI_0903_patch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched';
+  src: url('/fonts/PragmataProB_0903_patch.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched';
+  src: url('/fonts/PragmataProZ_0903_patch.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* PragmataPro Mono - Ligatures */
+@font-face {
+  font-family: 'PragmataPro Patched Mono Liga';
+  src: url('/fonts/PragmataPro_Mono_R_liga_0903_patch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched Mono Liga';
+  src: url('/fonts/PragmataPro_Mono_I_liga_0903_patch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched Mono Liga';
+  src: url('/fonts/PragmataPro_Mono_B_liga_0903_patch.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched Mono Liga';
+  src: url('/fonts/PragmataPro_Mono_Z_liga_0903_patch.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* PragmataPro Mono - Non-Ligature */
+@font-face {
+  font-family: 'PragmataPro Patched Mono';
+  src: url('/fonts/PragmataPro_Mono_R_0903_patch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched Mono';
+  src: url('/fonts/PragmataPro_Mono_I_0903_patch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched Mono';
+  src: url('/fonts/PragmataPro_Mono_B_0903_patch.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PragmataPro Patched Mono';
+  src: url('/fonts/PragmataPro_Mono_Z_0903_patch.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
