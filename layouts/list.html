@@ -11,7 +11,7 @@
 
 	{{- /* Right Column: Post List Window */ -}}
 	<main class="post-column h-feed">
-		{{ partial "cde-window-top.html" (dict "title" (printf "~/???/%s" (.Title | urlize)) "style" "min-height: 80vh;") }}
+		{{ partial "wm-window-top.html" (dict "title" (printf "~/???/%s" (.Title | urlize)) "style" "min-height: 80vh;") }}
 		{{ $posts := where (where .RegularPages "Section" "posts") "Draft" false }}
 		{{ range $p := (.Paginate $posts).Pages }}
 			<article class="post-list-item h-entry">
@@ -48,7 +48,7 @@
 		{{ end }}
 
 		{{ partial "pagination.html" . }}
-		{{ partial "cde-window-bottom.html" . }}
+		{{ partial "wm-window-bottom.html" . }}
 	</main>
 </div>
 {{ end }}

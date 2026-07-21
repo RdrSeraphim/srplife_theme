@@ -1,24 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 :root {
-    --cde-bg: #AEB2C3;
-    /* The main grey-blue */
-    --cde-title-active: #A64872;
-    /* The Pink/Purple */
-    --cde-title-text: #FFFFFF;
+    --cm-rosewater: #f5e0dc;
+    --cm-flamingo: #f2cdcd;
+    --cm-pink: #f5c2e7;
+    --cm-mauve: #cba6f7;
+    --cm-red: #f38ba8;
+    --cm-maroon: #eba0ac;
+    --cm-peach: #fab387;
+    --cm-yellow: #f9e2af;
+    --cm-green: #a6e3a1;
+    --cm-teal: #94e2d5;
+    --cm-sky: #89dceb;
+    --cm-sapphire: #74c7ec;
+    --cm-blue: #89b4fa;
+    --cm-lavender: #b4befe;
+    --cm-text: #cdd6f4;
+    --cm-subtext1: #bac2de;
+    --cm-subtext0: #a6adc8;
+    --cm-overlay2: #9399b2;
+    --cm-overlay1: #7f849c;
+    --cm-overlay0: #6c7086;
+    --cm-surface2: #585b70;
+    --cm-surface1: #45475a;
+    --cm-surface0: #313244;
+    --cm-base: #1e1e2e;
+    --cm-mantle: #181825;
+    --cm-crust: #11111b;
 
-    --cde-text: #000000;
-    --cde-text-muted: #444444;
+    /* Tiling WM tokens — flat, dark, minimal */
+    --wm-bg: var(--cm-base);
+    --wm-bg-alt: var(--cm-mantle);
+    --wm-border-focused: var(--cm-mauve);
+    --wm-border-unfocused: var(--cm-overlay0);
+    --wm-text: var(--cm-text);
+    --wm-text-muted: var(--cm-overlay1);
+    --wm-accent: var(--cm-mauve);
 
-    --cde-white: #FFFFFF;
-    --cde-light: #D6D8E0;
-    /* Highlight for bevels */
-    --cde-dark: #646875;
-    /* Shadow for bevels */
-    --cde-darker: #404040;
-    /* Deep shadow */
-
-    --font-sans: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    --font-sans: 'PragmataPro Patched Liga', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
     --font-serif: 'Georgia Pro', 'Source Serif 4', 'Lora', 'Times New Roman', serif;
     --font-mono: 'PragmataPro Patched Mono Liga', 'PragmataPro Mono Liga', 'PragmataPro Mono', 'PragmataPro', 'JetBrains Mono', monospace;
 }

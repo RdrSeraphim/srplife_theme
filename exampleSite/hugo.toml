@@ -19,6 +19,7 @@ path           = 'page'
 [params]
 author       = "Rdr. Seraphim Pardee"
 bio          = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
+contentRepo  = "https://github.com/RdrSeraphim/blog"
 description  = "The musings of an Orthodox Christian reader and software engineer."
 profileImage = "images/me.jpg"
 
@@ -47,22 +48,26 @@ profileImage = "images/me.jpg"
         url   = "https://www.linkedin.com/in/srpx"
 
     [params.indieweb]
-    additionalName  = "R."
-    birthday        = "1998-08-25"
-    country         = "United States of America"
-    emails          = ["me@srp.life", "srp@kerygma.digital"]
-    familyName      = "Pardee"
-    fullName        = "Rdr. Seraphim Pardee"
-    givenName       = "Seraphim"
+    additionalName = "R."
+    birthday = "1998-08-25"
+    country = "United States of America"
+    emails = ["me@srp.life", "srp@kerygma.digital"]
+    familyName = "Pardee"
+    fullName = "Rdr. Seraphim Pardee"
+    givenName = "Seraphim"
     honorificPrefix = "Rdr."
-    jobTitle        = "Reader (minor clergy), Software Engineer"
-    nicknames       = ["srp", "xsrp", "SeraphimRP", "RdrSeraphim"]
-    note            = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
-    photoURL        = "https://srp.life/images/me.jpg"
-    region          = "MI"
-    regionFull      = "Michigan"
-    sex             = "Male"
-    urls            = ['acct:blog@srp.life', 'acct:srp@defcon.social', 'https://defcon.social/@srp']
+    jobTitle = "Reader (minor clergy), Software Engineer"
+    nicknames = ["srp", "xsrp", "SeraphimRP", "RdrSeraphim"]
+    note = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
+    photoURL = "https://srp.life/images/me-and-mary.jpg"
+    region = "MI"
+    regionFull = "Michigan"
+    sex = "Male"
+    urls = [
+        'acct:blog@srp.life',
+        'acct:srp@defcon.social',
+        'https://defcon.social/@srp',
+    ]
 
     [params.giscus]
     # Fill these in with your own Giscus configuration
@@ -75,7 +80,7 @@ profileImage = "images/me.jpg"
     loading          = "lazy"
     mapping          = "og:title"
     reactionsEnabled = "1"
-    repo             = "rdrseraphim/rdrseraphim.github.io"
+    repo             = "rdrseraphim/blog"
     repoId           = "R_kgDOTSvrTw"
 
     [params.webmention]

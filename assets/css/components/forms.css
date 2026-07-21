@@ -1,33 +1,38 @@
-/* Form Elements (Inputs, Buttons) - Theming */
+/* Form Elements — dark flat */
 input[type="text"],
 input[type="email"],
 textarea {
-    background-color: #fff;
-    border: 2px solid var(--cde-dark);
-    border-bottom-color: var(--cde-white);
-    border-right-color: var(--cde-white);
+    background-color: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2);
     padding: 8px;
     font-family: var(--font-serif);
+    color: var(--cm-text);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--cm-mauve);
+    outline: none;
 }
 
 button,
 .button,
 .gh-btn {
-    background-color: var(--cde-bg);
-    color: var(--cde-text);
-    border-top: 2px solid var(--cde-white);
-    border-left: 2px solid var(--cde-white);
-    border-right: 2px solid var(--cde-dark);
-    border-bottom: 2px solid var(--cde-dark);
+    background-color: var(--cm-surface0);
+    color: var(--cm-text);
+    border: 1px solid var(--cm-surface2);
     padding: 8px 16px;
     cursor: pointer;
     font-family: var(--font-serif);
     font-weight: bold;
+    transition: background-color 0.1s ease;
+}
+
+button:hover {
+    background-color: var(--cm-surface1);
 }
 
 button:active {
-    border-top: 2px solid var(--cde-dark);
-    border-left: 2px solid var(--cde-dark);
-    border-right: 2px solid var(--cde-white);
-    border-bottom: 2px solid var(--cde-white);
+    background-color: var(--cm-surface2);
 }

@@ -14,7 +14,7 @@
 
 {{ $icon := resources.Get $path }}
 {{ if $icon }}
-	<i class="cde-btn cde-icon-btn {{ $class }}">
+	<i class="wm-btn wm-icon-btn {{ $class }}">
 		{{ $icon.Content | safeHTML }}
 	</i>
 {{ else }}

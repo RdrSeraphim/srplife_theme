@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Mobile menu toggle
     const mobileToggle = document.getElementById("system-bar-menu-toggle");
     const systemBarContent = document.querySelector(".system-bar-content");
 
@@ -6,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileToggle.addEventListener("click", function (e) {
             e.stopPropagation();
             systemBarContent.classList.toggle("active");
-            mobileToggle.classList.toggle("active");
         });
 
         // Close menu when clicking outside
@@ -17,28 +17,38 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.target !== mobileToggle
             ) {
                 systemBarContent.classList.remove("active");
-                mobileToggle.classList.remove("active");
             }
         });
     }
 
-    // Initialize CDE Clock
-    const clockElement = document.getElementById("cde-clock");
+    // Focused window title in system bar (sway-style)
+    const titleElement = document.getElementById("wm-title");
+    const defaultTitle = titleElement ? titleElement.textContent : "";
+
+    if (titleElement) {
+        document.querySelectorAll("[data-wm-title]").forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+                titleElement.textContent = el.dataset.wmTitle;
+            });
+            el.addEventListener("mouseleave", () => {
+                titleElement.textContent = defaultTitle;
+            });
+        });
+    }
+
+    // Clock
+    const clockElement = document.getElementById("wm-clock");
     if (clockElement) {
         function updateClock() {
             const now = new Date();
-            //const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-            //const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-            //const dayName = days[now.getDay()];
-            //const date = now.getDate();
             const day = now.getDate().toString().padStart(2, "0");
             const month = (now.getMonth() + 1).toString().padStart(2, "0");
             const year = now.getFullYear();
 
             let hours = now.getHours();
             const ampm = hours < 12 ? "AM" : "PM";
-            hours = hours < 12 ? hours : hours - 12;
+            hours = hours < 13 ? hours : hours - 12;
             let minutes = now.getMinutes();
             let seconds = now.getSeconds();
 
@@ -47,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
             minutes = minutes.toString().padStart(2, "0");
             seconds = seconds.toString().padStart(2, "0");
 
-            clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${ampm}`;
+            clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes} ${ampm}`;
         }
 
         updateClock(); // Initial call

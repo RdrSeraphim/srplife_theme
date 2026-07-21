@@ -1,0 +1,131 @@
+/* Tiling WM Window Component — Flat dark cards with thin accent borders */
+.wm-window {
+    background-color: var(--wm-bg);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 2px solid var(--wm-border-unfocused);
+    padding: 0;
+    transition: border-color 0.15s ease;
+}
+
+.wm-window:hover {
+    border-color: var(--wm-border-focused);
+}
+
+/* Window Content */
+.wm-window-content {
+    padding: 20px;
+    background-color: var(--wm-bg);
+    flex-grow: 1;
+    color: var(--wm-text);
+}
+
+/* Generic flat button */
+.wm-btn {
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2);
+    color: var(--wm-text);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.wm-btn:hover {
+    background-color: var(--cm-surface1);
+}
+
+.wm-btn:active {
+    background-color: var(--cm-surface2);
+}
+
+/* Icon button */
+.wm-icon-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wm-icon-btn svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    color: var(--wm-accent);
+    fill: currentColor;
+}
+
+.wm-icon-btn:not(.si) svg {
+    stroke: currentColor;
+    fill: none;
+}
+
+/* Terminal Emulator Extension */
+.wm-terminal-content {
+    background-color: var(--cm-base);
+    color: var(--cm-text);
+    font-family: var(--font-mono);
+    min-height: 400px;
+    min-width: 350px;
+}
+
+.wm-terminal-content p {
+    font-size: 10.5pt;
+    margin: 0 0 10px;
+    line-height: 0.392;
+}
+
+.wm-terminal-content .terminal-prompt-bg {
+    background-color: #687486;
+    color: #bac2de;
+    font-weight: bold;
+}
+
+.wm-terminal-content .terminal-prompt-arrow {
+    background-color: var(--cm-mantle);
+    color: #687486;
+}
+
+.wm-terminal-content .terminal-prompt-icon {
+    background-color: var(--cm-blue);
+    color: var(--cm-base);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wm-terminal-content .terminal-link {
+    color: var(--cm-text);
+    font-weight: normal;
+}
+
+.wm-terminal-content .terminal-link:hover {
+    color: var(--cm-text);
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--cm-green);
+    text-decoration-thickness: 1pt;
+}
+
+.wm-terminal-content .terminal-cmd {
+    color: var(--cm-green) !important;
+}
+
+.terminal-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

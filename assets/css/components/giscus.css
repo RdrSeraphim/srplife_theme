@@ -1,89 +1,87 @@
 @import "../settings.css";
 
-/* Giscus CDE Retro Theme */
+/* Giscus Dark Flat Theme */
 
 main {
-    /* Giscus Theme Variables aligned with CDE Solaris Palette */
-    --color-canvas-default: #AEB2C3;
-    --color-canvas-overlay: #D6D8E0;
-    --color-canvas-inset: #FFFFFF;
-    --color-canvas-subtle: #AEB2C3;
-    --color-border-default: #646875;
-    --color-border-muted: #D6D8E0;
-    --color-neutral-muted: rgba(100, 104, 117, 0.4);
+    /* Giscus Theme Variables — Catppuccin Mocha dark flat */
+    --color-canvas-default: var(--cm-base);
+    --color-canvas-overlay: var(--cm-surface0);
+    --color-canvas-inset: var(--cm-mantle);
+    --color-canvas-subtle: var(--cm-surface0);
+    --color-border-default: var(--cm-surface2);
+    --color-border-muted: var(--cm-surface1);
+    --color-neutral-muted: rgba(108, 112, 134, 0.4);
 
-    --color-fg-default: #000000;
-    --color-fg-muted: #404040;
-    --color-fg-subtle: #646875;
+    --color-fg-default: var(--cm-text);
+    --color-fg-muted: var(--cm-overlay1);
+    --color-fg-subtle: var(--cm-overlay0);
 
-    --color-accent-fg: #A64872;
-    --color-accent-emphasis: #A64872;
-    --color-accent-muted: rgba(166, 72, 114, 0.4);
-    --color-accent-subtle: rgba(166, 72, 114, 0.1);
+    --color-accent-fg: var(--cm-mauve);
+    --color-accent-emphasis: var(--cm-mauve);
+    --color-accent-muted: rgba(203, 166, 247, 0.4);
+    --color-accent-subtle: rgba(203, 166, 247, 0.1);
 
-    --color-success-fg: #22863a;
-    --color-attention-fg: #A64872;
-    --color-attention-muted: #A64872;
-    --color-attention-subtle: rgba(166, 72, 114, 0.1);
-    --color-danger-fg: #d73a49;
-    --color-danger-muted: rgba(215, 58, 73, 0.4);
-    --color-danger-subtle: rgba(215, 58, 73, 0.2);
+    --color-success-fg: var(--cm-green);
+    --color-attention-fg: var(--cm-mauve);
+    --color-attention-muted: var(--cm-mauve);
+    --color-attention-subtle: rgba(203, 166, 247, 0.1);
+    --color-danger-fg: var(--cm-red);
+    --color-danger-muted: rgba(243, 139, 168, 0.4);
+    --color-danger-subtle: rgba(243, 139, 168, 0.2);
 
-    --color-btn-text: #000000;
-    --color-btn-bg: #AEB2C3;
-    --color-btn-border: #646875;
-    --color-btn-hover-bg: #D6D8E0;
-    --color-btn-hover-border: #404040;
-    --color-btn-active-bg: #646875;
-    --color-btn-selected-bg: #646875;
-    --color-btn-counter-bg: #646875;
-    --color-btn-outline-text: #A64872;
+    --color-btn-text: var(--cm-text);
+    --color-btn-bg: var(--cm-surface0);
+    --color-btn-border: var(--cm-surface2);
+    --color-btn-hover-bg: var(--cm-surface1);
+    --color-btn-hover-border: var(--cm-surface2);
+    --color-btn-active-bg: var(--cm-surface2);
+    --color-btn-selected-bg: var(--cm-surface1);
+    --color-btn-counter-bg: var(--cm-surface1);
+    --color-btn-outline-text: var(--cm-mauve);
     --color-btn-shadow: 0 0 transparent;
     --color-btn-inset-shadow: 0 0 transparent;
 
-    --color-btn-primary-text: #FFFFFF;
-    --color-btn-primary-bg: #A64872;
-    --color-btn-primary-border: #404040;
+    --color-btn-primary-text: var(--cm-crust);
+    --color-btn-primary-bg: var(--cm-mauve);
+    --color-btn-primary-border: var(--cm-surface2);
     --color-btn-primary-shadow: 0 0 transparent;
     --color-btn-primary-inset-shadow: 0 0 transparent;
-    --color-btn-primary-hover-bg: #bf5b88;
-    --color-btn-primary-hover-border: #404040;
-    --color-btn-primary-selected-bg: #8f3d61;
+    --color-btn-primary-hover-bg: #d4b5fa;
+    --color-btn-primary-hover-border: var(--cm-surface2);
+    --color-btn-primary-selected-bg: #b48ff0;
     --color-btn-primary-selected-shadow: 0 0 transparent;
-    --color-btn-primary-disabled-text: #646875;
-    --color-btn-primary-disabled-bg: rgba(166, 72, 114, 0.4);
+    --color-btn-primary-disabled-text: var(--cm-overlay0);
+    --color-btn-primary-disabled-bg: rgba(203, 166, 247, 0.4);
     --color-btn-primary-disabled-border: transparent;
 
-    /* Syntax Highlighting for code blocks matching mocha-chroma */
-    --color-prettylights-syntax-comment: #6c7086;
-    --color-prettylights-syntax-constant: #fab387;
-    --color-prettylights-syntax-entity: #89b4fa;
-    --color-prettylights-syntax-storage-modifier-import: #fab387;
-    --color-prettylights-syntax-entity-tag: #cba6f7;
-    --color-prettylights-syntax-keyword: #cba6f7;
-    --color-prettylights-syntax-string: #a6e3a1;
-    --color-prettylights-syntax-variable: #f5e0dc;
-    --color-prettylights-syntax-invalid-illegal-text: #f38ba8;
+    /* Syntax Highlighting — Catppuccin Mocha */
+    --color-prettylights-syntax-comment: var(--cm-overlay0);
+    --color-prettylights-syntax-constant: var(--cm-peach);
+    --color-prettylights-syntax-entity: var(--cm-blue);
+    --color-prettylights-syntax-storage-modifier-import: var(--cm-peach);
+    --color-prettylights-syntax-entity-tag: var(--cm-mauve);
+    --color-prettylights-syntax-keyword: var(--cm-mauve);
+    --color-prettylights-syntax-string: var(--cm-green);
+    --color-prettylights-syntax-variable: var(--cm-rosewater);
+    --color-prettylights-syntax-invalid-illegal-text: var(--cm-red);
     --color-prettylights-syntax-invalid-illegal-bg: rgba(243, 139, 168, 0.15);
-    --color-prettylights-syntax-markup-heading: #fab387;
-    --color-prettylights-syntax-markup-italic: #f9e2af;
-    --color-prettylights-syntax-markup-bold: #f9e2af;
-    --color-prettylights-syntax-markup-deleted-text: #cdd6f4;
+    --color-prettylights-syntax-markup-heading: var(--cm-peach);
+    --color-prettylights-syntax-markup-italic: var(--cm-yellow);
+    --color-prettylights-syntax-markup-bold: var(--cm-yellow);
+    --color-prettylights-syntax-markup-deleted-text: var(--cm-text);
     --color-prettylights-syntax-markup-deleted-bg: rgba(243, 139, 168, 0.4);
-    --color-prettylights-syntax-markup-inserted-text: #cdd6f4;
+    --color-prettylights-syntax-markup-inserted-text: var(--cm-text);
     --color-prettylights-syntax-markup-inserted-bg: rgba(166, 227, 161, 0.4);
-    --color-prettylights-syntax-markup-changed-text: #cdd6f4;
+    --color-prettylights-syntax-markup-changed-text: var(--cm-text);
     --color-prettylights-syntax-markup-changed-bg: rgba(249, 226, 175, 0.4);
-    --color-prettylights-syntax-markup-ignored-text: #cdd6f4;
+    --color-prettylights-syntax-markup-ignored-text: var(--cm-text);
 
     --color-primer-shadow-inset: 0 0 transparent;
-    --color-scale-gray-7: #646875;
-    --color-scale-blue-8: #A64872;
-    --color-social-reaction-bg-hover: #D6D8E0;
-    --color-social-reaction-bg-reacted-hover: #A64872;
+    --color-scale-gray-7: var(--cm-surface2);
+    --color-scale-blue-8: var(--cm-mauve);
+    --color-social-reaction-bg-hover: var(--cm-surface1);
+    --color-social-reaction-bg-reacted-hover: var(--cm-mauve);
 }
-
-/* Custom CDE Override Rules */
 
 /* Remove rounded corners globally */
 main,
@@ -107,28 +105,24 @@ main,
     border-radius: 0 !important;
 }
 
-/* Typography settings */
+/* Typography */
 main {
     font-family: 'Georgia Pro', 'Source Serif 4', 'Lora', 'Times New Roman', serif !important;
 }
 
-/* Style comments as CDE windows */
+/* Style comments as dark flat cards */
 .gsc-comment {
-    background-color: #AEB2C3 !important;
-    border-top: 2px solid #FFFFFF !important;
-    border-left: 2px solid #FFFFFF !important;
-    border-right: 2px solid #646875 !important;
-    border-bottom: 2px solid #646875 !important;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2) !important;
+    background-color: var(--cm-surface0) !important;
+    border: 1px solid var(--cm-surface2) !important;
     margin-bottom: 20px !important;
     overflow: hidden !important;
 }
 
-/* CDE active title-bar styled header */
+/* Comment header — mauve accent bar */
 .gsc-comment-header {
-    background-color: #A64872 !important;
-    color: #FFFFFF !important;
-    border-bottom: 2px solid #646875 !important;
+    background-color: var(--cm-surface1) !important;
+    color: var(--cm-text) !important;
+    border-bottom: 1px solid var(--cm-surface2) !important;
     padding: 6px 12px !important;
 }
 
@@ -140,7 +134,7 @@ main {
 .gsc-comment-header a,
 .gsc-comment-header span,
 .gsc-comment-header .gsc-comment-author {
-    color: #FFFFFF !important;
+    color: var(--cm-text) !important;
     font-weight: bold !important;
 }
 
@@ -150,29 +144,24 @@ main {
 
 .gsc-comment-header a:hover {
     text-decoration: underline !important;
+    color: var(--cm-mauve) !important;
 }
 
-/* Inset body content style */
+/* Comment body */
 .gsc-comment-content {
-    background-color: #AEB2C3 !important;
-    color: #000000 !important;
+    background-color: var(--cm-base) !important;
+    color: var(--cm-subtext1) !important;
     padding: 15px !important;
-    border-top: 2px solid #FFFFFF !important;
-    border-left: 2px solid #FFFFFF !important;
-    border-right: 2px solid #646875 !important;
-    border-bottom: 2px solid #646875 !important;
+    border: 1px solid var(--cm-surface1) !important;
     border-radius: 0;
     margin: 10px !important;
 }
 
-/* Input / Write box styling */
+/* Textarea */
 .gsc-comment-box-textarea {
-    background-color: #FFFFFF !important;
-    color: #000000 !important;
-    border-top: 2px solid #FFFFFF !important;
-    border-left: 2px solid #FFFFFF !important;
-    border-right: 2px solid #646875 !important;
-    border-bottom: none;
+    background-color: var(--cm-mantle) !important;
+    color: var(--cm-text) !important;
+    border: 1px solid var(--cm-surface2) !important;
     padding: 8px !important;
     font-family: 'Georgia Pro', 'Source Serif 4', 'Lora', 'Times New Roman', serif !important;
     font-size: 1rem !important;
@@ -180,17 +169,14 @@ main {
 }
 
 .gsc-comment-box-preview {
-    border-top: 2px solid #FFFFFF !important;
-    border-left: 2px solid #FFFFFF !important;
-    border-right: 2px solid #646875 !important;
+    border: 1px solid var(--cm-surface2) !important;
 }
 
 .gsc-comment-box-textarea-extras {
-    border-left: 2px solid #FFFFFF !important;
-    border-right: 2px solid #646875 !important;
-    border-bottom: 2px solid #646875 !important;
+    border: 1px solid var(--cm-surface2) !important;
+    border-top: none !important;
     border-radius: 0;
-    background-color: var(--cde-bg);
+    background-color: var(--cm-surface0);
 }
 
 .gsc-comment-box-write:focus-within {
@@ -203,20 +189,20 @@ main {
     border: none !important;
 }
 
-/* Retro CDE Buttons */
+/* Flat dark buttons */
 .gsc-comment-box-buttons .btn-primary,
 .gsc-comment-box-bottom button,
 .gsc-pagination-button,
 .gsc-right-header .BtnGroup-item .btn,
 .gsc-reactions-button {
-    background-color: var(--cde-bg) !important;
-    border: 1px solid transparent !important;
-    box-shadow: inset 1px 1px 0 var(--cde-white), inset -1px -1px 0 var(--cde-dark) !important;
+    background-color: var(--cm-surface0) !important;
+    border: 1px solid var(--cm-surface2) !important;
     display: flex !important;
     justify-content: center;
     align-items: center;
     cursor: pointer !important;
-    color: var(--cde-text);
+    color: var(--cm-text);
+    box-shadow: none !important;
 }
 
 .gsc-comment-box-bottom button,
@@ -229,15 +215,15 @@ main {
 }
 
 .gsc-emoji-button {
-    background-color: var(--cde-bg) !important;
-    border: 1px solid transparent !important;
-    box-shadow: inset 1px 1px 0 var(--cde-white), inset -1px -1px 0 var(--cde-dark) !important;
+    background-color: var(--cm-surface0) !important;
+    border: 1px solid var(--cm-surface2) !important;
     cursor: pointer;
-    color: var(--cde-title-active) !important;
+    color: var(--cm-mauve) !important;
     margin-right: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: none !important;
 }
 
 .gsc-emoji-button:last-child {
@@ -245,7 +231,7 @@ main {
 }
 
 .gsc-social-reaction-summary-item.has-reacted:hover:enabled {
-    color: var(--cde-white);
+    color: var(--cm-crust);
 }
 
 .gsc-emoji-button:focus .gsc-emoji,
@@ -260,7 +246,7 @@ main {
 
 .gsc-reactions-button .octicon,
 .gsc-comment-box-buttons .octicon {
-    fill: var(--cde-title-active) !important;
+    fill: var(--cm-mauve) !important;
 }
 
 .gsc-comments {
@@ -270,16 +256,16 @@ main {
 .gsc-pagination-button:hover,
 .gsc-emoji-button:hover,
 .gsc-reactions-button:hover {
-    box-shadow: inset 1px 1px 0 var(--cde-dark), inset -1px -1px 0 var(--cde-white) !important;
-    background-color: #a0a0a0 !important;
+    background-color: var(--cm-surface1) !important;
+    box-shadow: none !important;
 }
 
 .gsc-comment-box-buttons .btn-primary:hover,
 .gsc-comment-box-buttons button:hover,
 .gsc-comment-box-buttons .btn:hover,
 .gsc-comment-box-bottom button:hover {
-    box-shadow: inset 1px 1px 0 var(--cde-white), inset -1px -1px 0 var(--cde-dark) !important;
-    background-color: #c0c4d6 !important;
+    background-color: var(--cm-surface1) !important;
+    box-shadow: none !important;
 }
 
 .gsc-reactions-popover::before,
@@ -302,13 +288,13 @@ main {
     font-family: var(--font-serif);
     font-size: 1rem;
     font-weight: 500;
-    color: var(--cde-text);
+    color: var(--cm-text);
 }
 
 .gsc-reactions-popover p .color-text-link,
 .gsc-comment-box-bottom button {
     font-weight: bold;
-    color: var(--cde-title-active);
+    color: var(--cm-mauve);
     text-decoration: none;
 }
 
@@ -317,7 +303,7 @@ main {
 }
 
 .gsc-right-header .BtnGroup-item--selected button {
-    color: var(--cde-title-active) !important;
+    color: var(--cm-mauve) !important;
 }
 
 .gsc-comment-box-bottom button .octicon {
@@ -331,23 +317,15 @@ main {
 .gsc-reactions-popover {
     width: max-content !important;
     left: 0px !important;
-    background-color: var(--cde-bg);
-    border-bottom: 2px solid var(--cde-dark);
-    border-right: 2px solid var(--cde-dark);
-    border-left: 2px solid var(--cde-white);
-    border-top: 2px solid var(--cde-white);
+    background-color: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2);
     border-radius: 0 !important;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
 }
 
 .gsc-comment-box {
-    background-color: var(--cde-bg);
-    border-bottom: 2px solid var(--cde-dark);
-    border-right: 2px solid var(--cde-dark);
-    border-left: 2px solid var(--cde-white);
-    border-top: 2px solid var(--cde-white);
+    background-color: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2);
     border-radius: 0 !important;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
 }
 
 .gsc-comment-box-is-reply .gsc-comment-box-tabs {
@@ -355,18 +333,13 @@ main {
 }
 
 .gsc-comment-box-is-reply {
-    border-bottom: 2px solid var(--cde-white) !important;
-    border-right: 2px solid var(--cde-white) !important;
-    border-left: 2px solid var(--cde-dark) !important;
-    border-top: 2px solid var(--cde-dark) !important;
+    border: 1px solid var(--cm-surface1) !important;
 }
 
 .gsc-comment-box-is-reply .gsc-comment-box-textarea {
-    background-color: #FFFFFF !important;
-    color: #000000 !important;
-    border-right: 2px solid var(--cde-white) !important;
-    border-left: 2px solid var(--cde-dark) !important;
-    border-top: 2px solid var(--cde-dark) !important;
+    background-color: var(--cm-mantle) !important;
+    color: var(--cm-text) !important;
+    border: 1px solid var(--cm-surface2) !important;
     border-bottom: none;
     padding: 8px !important;
     font-family: 'Georgia Pro', 'Source Serif 4', 'Lora', 'Times New Roman', serif !important;
@@ -375,9 +348,8 @@ main {
 }
 
 .gsc-comment-box-is-reply .gsc-comment-box-textarea-extras {
-    border-left: 2px solid var(--cde-dark) !important;
-    border-right: 2px solid var(--cde-white) !important;
-    border-bottom: 2px solid var(--cde-white) !important;
+    border: 1px solid var(--cm-surface2) !important;
+    border-top: none !important;
 }
 
 .gsc-comment-box-is-reply .gsc-comment-box-tabs button {
@@ -387,25 +359,19 @@ main {
 }
 
 .gsc-comment-box-is-reply .gsc-comment-box-preview {
-    border-top: 2px solid #646875 !important;
-    border-left: 2px solid #646875 !important;
-    border-right: 2px solid #FFFFFF !important;
-    border-bottom: 2px solid #FFFFFF !important;
+    border: 1px solid var(--cm-surface2) !important;
 }
 
 .gsc-reply-box button {
     border-radius: 0 !important;
-    background-color: var(--cde-white);
-    border-top: 2px solid #646875 !important;
-    border-left: 2px solid #646875 !important;
-    border-right: 2px solid #FFFFFF !important;
-    border-bottom: 2px solid #FFFFFF !important;
+    background-color: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2) !important;
 }
 
 .gsc-replies {
     border-radius: 0;
     border: none;
-    background-color: var(--cde-bg);
+    background-color: var(--cm-surface0);
     padding-top: 0px;
 }
 
@@ -418,15 +384,12 @@ main {
 }
 
 .markdown h6 {
-    color: var(--cde-text) !important;
+    color: var(--cm-text) !important;
 }
 
-/* Retro Square Avatars */
+/* Square Avatars */
 .gsc-comment-author-avatar img {
-    border-bottom: 2px solid var(--cde-dark);
-    border-right: 2px solid var(--cde-dark);
-    border-left: 2px solid var(--cde-white);
-    border-top: 2px solid var(--cde-white);
+    border: 1px solid var(--cm-surface2);
     border-radius: 0 !important;
 }
 
@@ -435,13 +398,13 @@ main {
     display: inline-flex;
     margin-left: 0.5em;
     content: " [author]";
-    color: var(--cde-white);
+    color: var(--cm-mauve);
     font-size: 10px;
     text-decoration: none;
 }
 
 .gsc-reply-author a[href^="https://github.com/RdrSeraphim"] .link-primary::after {
-    color: var(--cde-text);
+    color: var(--cm-mauve);
 }
 
 .gsc-comment-author a[href^="https://github.com/RdrSeraphim"] .link-primary::after:hover,
@@ -449,30 +412,30 @@ main {
     text-decoration: none !important;
 }
 
-/* Comment Box Editor Tabs */
+/* Tabs */
 .gsc-tab {
     border: 2px solid transparent !important;
     border-bottom: none !important;
-    color: #000000 !important;
+    color: var(--cm-text) !important;
     padding: 4px 8px !important;
 }
 
 .gsc-tab[aria-selected="true"] {
-    background-color: #AEB2C3 !important;
-    border-top: 2px solid #FFFFFF !important;
-    border-left: 2px solid #FFFFFF !important;
-    border-right: 2px solid #646875 !important;
-    border-bottom: 2px solid #AEB2C3 !important;
+    background-color: var(--cm-surface0) !important;
+    border-top: 1px solid var(--cm-surface2) !important;
+    border-left: 1px solid var(--cm-surface2) !important;
+    border-right: 1px solid var(--cm-surface2) !important;
+    border-bottom: 1px solid var(--cm-surface0) !important;
     font-weight: bold !important;
     position: relative !important;
     bottom: -2px !important;
     z-index: 2 !important;
 }
 
-/* Markdown styling inside comments */
+/* Markdown in comments */
 .gsc-comment-content blockquote {
-    background-color: hsla(0, 0%, 100%, .3);
-    border-left: 4px solid var(--cde-title-active);
+    background-color: var(--cm-surface0);
+    border-left: 3px solid var(--cm-mauve);
     font-style: italic;
     margin: 1.5em 0;
     padding: .5em 1em;
@@ -483,7 +446,7 @@ main {
 }
 
 .gsc-comment-content hr {
-    border-color: var(--cde-white) !important;
+    border-color: var(--cm-surface1) !important;
     border-top-width: 1px;
     height: 0px;
     background-color: initial;
@@ -492,7 +455,7 @@ main {
 }
 
 .gsc-comment-content a {
-    color: #A64872 !important;
+    color: var(--cm-mauve) !important;
     font-weight: bold !important;
     text-decoration: none !important;
 }
@@ -503,8 +466,8 @@ main {
 
 .gsc-comment-content pre,
 .gsc-comment-content code {
-    background-color: #1e1e2e !important;
-    color: #cdd6f4 !important;
+    background-color: var(--cm-mantle) !important;
+    color: var(--cm-text) !important;
     font-family: var(--font-mono), monospace !important;
     border-radius: 0 !important;
 }

@@ -7,7 +7,7 @@
 .home-layout {
     display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 40px;
+    gap: 20px;
 }
 
 @media (max-width: 800px) {
@@ -21,10 +21,8 @@ footer {
     max-width: 1100px;
     margin: 0 auto;
     font-size: 0.85rem;
-    color: var(--cde-text-muted);
-    background-color: var(--cde-bg);
-    border: 2px solid var(--cde-dark);
-    border-bottom-color: var(--cde-white);
-    border-right-color: var(--cde-white);
+    color: var(--wm-text-muted);
+    background-color: var(--cm-mantle);
+    border: 1px solid var(--cm-surface0);
     padding: 10px;
 }

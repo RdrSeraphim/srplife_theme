@@ -1,8 +1,9 @@
-/* Post Content */
+/* Post Content — dark flat */
 .gh-content {
     line-height: 1.6;
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 1rem;
+    color: var(--cm-subtext1);
 }
 
 .gh-content p {
@@ -15,11 +16,16 @@
 
 .gh-content h1,
 .gh-content h2,
-.gh-content h3 {
-    font-family: var(--font-serif);
-    margin-top: 1.5em;
-    color: var(--cde-title-active);
-    border-bottom: 1px solid var(--cde-dark);
+.gh-content h3,
+.gh-content h4,
+.gh-content h5,
+.gh-content h6 {
+    font-family: var(--font-sans);
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.2em;
+    color: var(--cm-mauve);
+    border-bottom: 1px solid var(--cm-surface1);
     position: relative;
 }
 
@@ -37,38 +43,24 @@
     margin-right: 10px;
     margin-left: -15px;
     margin-top: 2px;
-    /* Pull it out to the left */
-    color: var(--cde-text-muted);
+    color: var(--cm-overlay0);
     font-weight: normal;
     text-decoration: none;
     font-size: 0.8em;
     position: absolute;
-    /* Take it out of flow to avoid shifting text */
     left: 0;
-
 }
 
-.gh-content h1,
-.gh-content h2,
-.gh-content h3,
-.gh-content h4,
-.gh-content h5,
-.gh-content h6 {
-    position: relative;
-    /* Ensure anchor is positioned relative to header */
-}
 
 .header-anchor:hover {
     text-decoration: none;
-    color: var(--cde-title-active);
+    color: var(--cm-mauve);
 }
 
 .gh-content pre {
     padding: 1em;
-    /* Inset Bevel */
-    border: 2px solid var(--cde-dark);
-    border-bottom-color: var(--cde-white);
-    border-right-color: var(--cde-white);
+    border: 1px solid var(--cm-surface1);
+    background-color: var(--cm-mantle);
     overflow-x: auto;
     margin: 1.5em 0;
 }
@@ -76,16 +68,17 @@
 .gh-content blockquote {
     margin: 1.5em 0;
     padding: 0.5em 1em;
-    border-left: 4px solid var(--cde-title-active);
-    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 3px solid var(--cm-mauve);
+    background-color: var(--cm-surface0);
     font-style: italic;
+    color: var(--cm-subtext0);
 }
 
 /* Comments */
 .comments-section {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 2px groove var(--cde-white);
+    border-top: 1px solid var(--cm-surface0);
 }
 
 .gh-content li {
@@ -95,7 +88,7 @@
 /* Hide additional tags by default */
 .additional-tags {
     cursor: pointer;
-    color: var(--cde-title-active);
+    color: var(--cm-mauve);
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -114,12 +107,8 @@
     top: 20px;
     min-width: 130px;
     width: fit-content;
-    background-color: var(--cde-bg);
-    border-bottom: 2px solid var(--cde-dark);
-    border-right: 2px solid var(--cde-dark);
-    border-left: 2px solid var(--cde-white);
-    border-top: 2px solid var(--cde-white);
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
+    background-color: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2);
     padding: 5px;
     z-index: 999;
 }
@@ -129,15 +118,15 @@
     display: block;
     margin: 3px 0;
     padding: 5px 2px;
-    border-bottom: 1px solid var(--cde-dark);
-    border-left: 1px solid var(--cde-white);
-    border-right: 1px solid var(--cde-dark);
-    border-top: 1px solid var(--cde-white);
+    border-bottom: 2px solid var(--cm-surface1);
     font-size: .8rem;
+    color: var(--cm-text);
 }
 
 .more-tags a:hover {
-    background-color: #c0c4d6;
+    background-color: var(--cm-surface1);
+    text-decoration: none;
+    border-bottom: 2px solid var(--cm-mauve);
 }
 
 .additional-tags:hover .more-tags {

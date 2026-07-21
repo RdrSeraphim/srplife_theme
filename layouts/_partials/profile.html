@@ -1,5 +1,5 @@
 <aside class="profile-column">
-	{{ partial "cde-window-top.html" (dict "title" "~") }}
+	{{ partial "wm-window-top.html" (dict "title" "~") }}
 	{{ if .profilePicture }}
 		<img src="{{ .profilePicture | relURL }}" alt="{{ .profileTitle }}" class="profile-photo">
 	{{ else }}
@@ -19,9 +19,9 @@
 
 	{{- with .GitInfo }}
 		<div class="profile-git-info">
-			<p>Last updated: {{ .CommitDate.Format "2006-01-02" }} (<a href="https://github.com/RdrSeraphim/blog/commit/{{ .Hash }}">{{ .AbbreviatedHash }}</a>)</p>
+			<p>Last updated: {{ .CommitDate.Format "2006-01-02" }} ({{ with $.Site.Params.contentRepo }}<a href="{{ . }}/commit/{{ $.GitInfo.Hash }}">{{ $.GitInfo.AbbreviatedHash }}</a>{{ else }}{{ .AbbreviatedHash }}{{ end }})</p>
 		</div>
 	{{- end }}
 
-	{{ partial "cde-window-bottom.html" . }}
+	{{ partial "wm-window-bottom.html" . }}
 </aside>

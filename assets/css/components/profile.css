@@ -1,13 +1,9 @@
-/* Profile Window */
+/* Profile Window — dark flat card */
 .profile-photo {
     width: 100%;
     height: auto;
-    /* Inset Bevel */
-    border: 2px solid var(--cde-dark);
-    border-bottom-color: var(--cde-white);
-    border-right-color: var(--cde-white);
+    border: 1px solid var(--cm-surface2);
     margin-bottom: 15px;
-    background-color: #ddd;
     display: block;
 }
 
@@ -15,11 +11,13 @@
     margin: 0 0 10px 0;
     font-size: 1.2rem;
     font-weight: bold;
+    color: var(--cm-text);
 }
 
 .profile-bio {
     font-size: 0.9rem;
     margin-bottom: 15px;
+    color: var(--cm-subtext0);
 }
 
 .profile-social {
@@ -32,9 +30,9 @@
 }
 
 .profile-social .si {
-    color: var(--cde-title-active);
-    fill: var(--cde-title-active);
-    stroke: var(--cde-title-active);
+    color: var(--wm-accent);
+    fill: var(--wm-accent);
+    stroke: var(--wm-accent);
     stroke-width: 0;
 }
 
@@ -51,9 +49,9 @@
     padding-top: 20px;
     margin-bottom: -10px;
     text-align: center;
-    color: color-mix(in oklab, var(--cde-dark), white 20%);
+    color: var(--cm-overlay0);
 }
 
 .profile-git-info p a {
-    color: color-mix(in oklab, var(--cde-title-active), white 20%);
+    color: var(--cm-mauve);
 }

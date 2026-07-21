@@ -1,12 +1,13 @@
-/* Reset & Base */
+/* Reset & Base — Dark tiling WM theme */
 html {
     box-sizing: border-box;
     font-size: 16px;
-
-    color: var(--cde-text);
-    font-family: var(--font-serif);
-    /* Simple SVG Pattern Background */
-    background-image: url("/images/background_purple.svg");
+    color: var(--wm-text);
+    font-family: var(--font-sans);
+    /* Background image already set by user */
+    background-image: url("/images/gate_mocha.jpg");
+    background-size: cover;
+    background-color: var(--cm-crust);
 }
 
 *,
@@ -17,8 +18,8 @@ html {
 
 body {
     margin: 0;
-    padding: 80px 40px 40px 40px;
-    /* Increased top padding for system bar */
+    padding: 48px 20px 20px 20px;
+    /* Top padding for system bar */
     min-height: 100vh;
 }
 
@@ -32,109 +33,62 @@ img {
 }
 
 a {
-    color: var(--cde-title-active);
+    color: var(--wm-accent);
     text-decoration: none;
-    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* Motif/CDE Scrollbar Styling */
+/* Thin modern scrollbars — dark theme */
 ::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
-    background-color: var(--cde-bg);
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--cde-dark);
-    border: 2px solid;
-    border-color: var(--cde-darker) var(--cde-white) var(--cde-white) var(--cde-darker);
+    background: var(--cm-mantle);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--cde-bg);
-    border: 2px solid;
-    border-color: var(--cde-white) var(--cde-darker) var(--cde-darker) var(--cde-white);
+    background: var(--cm-surface2);
+    border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:active {
-    background-color: var(--cde-light);
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cm-overlay0);
 }
 
-::-webkit-scrollbar-button {
-    background-color: var(--cde-bg);
-    border: 2px solid;
-    border-color: var(--cde-white) var(--cde-darker) var(--cde-darker) var(--cde-white);
-    display: block;
-    width: 20px;
-    height: 20px;
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--cm-surface2) var(--cm-mantle);
 }
 
-/* Hide double buttons to ensure only one button on each end */
-::-webkit-scrollbar-button:start:increment,
-::-webkit-scrollbar-button:end:decrement {
-    display: none;
-}
-
-::-webkit-scrollbar-button:active {
-    border-color: var(--cde-darker) var(--cde-white) var(--cde-white) var(--cde-darker);
-    background-color: var(--cde-dark);
-}
-
-/* Scrollbar Button Icons */
-::-webkit-scrollbar-button:vertical:decrement {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><polygon points="8,4 12,10 4,10" fill="black"/></svg>');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-::-webkit-scrollbar-button:vertical:increment {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><polygon points="4,6 12,6 8,12" fill="black"/></svg>');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-::-webkit-scrollbar-button:horizontal:decrement {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><polygon points="10,4 10,12 4,8" fill="black"/></svg>');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-::-webkit-scrollbar-button:horizontal:increment {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><polygon points="6,4 12,8 6,12" fill="black"/></svg>');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
+/* Tables — dark flat */
 table {
-    background-color: var(--cde-bg);
-    border-top: 2px solid #FFFFFF;
-    border-left: 2px solid #FFFFFF;
-    border-right: 2px solid #646875;
-    border-bottom: 2px solid #646875;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    background-color: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2);
+    color: var(--wm-text);
 }
 
 thead {
     text-align: center;
-    border-top: 2px solid #646875;
-    border-left: 2px solid #646875;
-    border-right: 2px solid #FFFFFF;
-    border-bottom: 2px solid #FFFFFF;
+    background-color: var(--cm-surface1);
+    border-bottom: 1px solid var(--cm-surface2);
 }
 
 tbody tr td {
     padding: 10px;
-    border-top: 2px solid #FFFFFF;
-    border-left: 2px solid #FFFFFF;
-    border-right: 2px solid #646875;
-    border-bottom: 2px solid #646875;
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--cm-surface0);
 }
 
-tbody tr td:hover {
-    background-color: var(--cde-light);
+tbody tr:hover td {
+    background-color: var(--cm-surface1);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--cm-surface0);
 }

@@ -3,20 +3,18 @@
     margin-bottom: 1.5em;
 }
 
-/* Ghost Bookmark Card */
+/* Bookmark Card — dark flat */
 .kg-bookmark-card {
     width: 100%;
-    background: var(--cde-white);
-    border: 2px solid var(--cde-dark);
-    border-bottom-color: var(--cde-white);
-    border-right-color: var(--cde-white);
+    background: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2);
     margin-bottom: 1.5em;
 }
 
 .kg-bookmark-container {
     display: flex;
     text-decoration: none;
-    color: var(--cde-text);
+    color: var(--cm-text);
     min-height: 148px;
 }
 
@@ -34,13 +32,14 @@
     line-height: 1.3em;
     font-weight: 600;
     margin-bottom: 5px;
+    color: var(--cm-text);
 }
 
 .kg-bookmark-description {
     font-size: 0.9rem;
     line-height: 1.4em;
     margin-bottom: 5px;
-    color: #555;
+    color: var(--cm-subtext0);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -52,7 +51,7 @@
     display: flex;
     align-items: center;
     font-size: 0.8rem;
-    color: #777;
+    color: var(--cm-overlay1);
     margin-top: auto;
 }
 
@@ -77,7 +76,7 @@
     object-fit: cover;
 }
 
-/* Ghost Gallery */
+/* Gallery */
 .kg-gallery-container {
     display: flex;
     flex-direction: column;
@@ -97,8 +96,7 @@
     height: 100%;
 }
 
-/* Ghost Widths */
-/* Ghost Widths - Constrained to CDE Window */
+/* Widths */
 .kg-width-wide {
     width: 100%;
 }
@@ -107,39 +105,26 @@
     width: 100%;
 }
 
-/* Ghost Callout Card */
+/* Callout Card — dark flat */
 .kg-callout-card {
     display: flex;
     gap: 16px;
     padding: 20px;
     margin-bottom: 1.5em;
     border-radius: 0;
-    /* No rounded corners in CDE */
-
-    /* Default CDE Look: Raised Panel */
-    background-color: var(--cde-bg);
-    color: var(--cde-text);
-    border-top: 2px solid var(--cde-white);
-    border-left: 2px solid var(--cde-white);
-    border-right: 2px solid var(--cde-dark);
-    border-bottom: 2px solid var(--cde-dark);
+    background-color: var(--cm-surface0);
+    color: var(--cm-text);
+    border: 1px solid var(--cm-surface2);
 }
 
 .kg-callout-card-grey {
-    /* Dark "Terminal" or "Inset" look based on user reference */
-    background-color: var(--cde-darker);
-
-    color: var(--cde-white);
-
-    /* Inset Bevel */
-    border-top: 2px solid #222;
-    border-left: 2px solid #222;
-    border-right: 2px solid var(--cde-dark);
-    border-bottom: 2px solid var(--cde-dark);
+    background-color: var(--cm-mantle);
+    color: var(--cm-text);
+    border: 1px solid var(--cm-surface0);
 }
 
 .kg-callout-card-grey a {
-    color: #fff;
+    color: var(--cm-mauve);
     text-decoration: underline;
 }
 
@@ -154,15 +139,11 @@
     line-height: 1.5;
 }
 
-/* Ghost Toggle Card */
+/* Toggle Card — dark flat */
 .kg-toggle-card {
-    background-color: var(--cde-bg);
+    background-color: var(--cm-surface0);
     margin-bottom: 1.5em;
-    /* Raised Panel */
-    border-top: 2px solid var(--cde-white);
-    border-left: 2px solid var(--cde-white);
-    border-right: 2px solid var(--cde-dark);
-    border-bottom: 2px solid var(--cde-dark);
+    border: 1px solid var(--cm-surface2);
     padding: 16px;
 }
 
@@ -172,6 +153,7 @@
     align-items: center;
     cursor: pointer;
     font-weight: bold;
+    color: var(--cm-text);
 }
 
 .kg-toggle-card-icon {
@@ -181,16 +163,13 @@
 
 .kg-toggle-content {
     margin-top: 16px;
-    /* Inset Panel for content */
-    background-color: rgba(255, 255, 255, 0.3);
-    border-top: 2px solid var(--cde-dark);
-    border-left: 2px solid var(--cde-dark);
-    border-right: 2px solid var(--cde-white);
-    border-bottom: 2px solid var(--cde-white);
+    background-color: var(--cm-mantle);
+    border: 1px solid var(--cm-surface0);
     padding: 16px;
+    color: var(--cm-subtext1);
 }
 
-/* Ghost File Card */
+/* File Card — dark flat */
 .kg-file-card {
     margin-bottom: 1.5em;
 }
@@ -199,23 +178,19 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    background-color: var(--cde-bg);
-    color: var(--cde-text);
-    /* Raised Button Look */
-    border-top: 2px solid var(--cde-white);
-    border-left: 2px solid var(--cde-white);
-    border-right: 2px solid var(--cde-dark);
-    border-bottom: 2px solid var(--cde-dark);
+    background-color: var(--cm-surface0);
+    color: var(--cm-text);
+    border: 1px solid var(--cm-surface2);
     padding: 16px;
-    transition: all 0.1s;
+    transition: background-color 0.1s ease;
+}
+
+.kg-file-card-container:hover {
+    background-color: var(--cm-surface1);
 }
 
 .kg-file-card-container:active {
-    border-top: 2px solid var(--cde-dark);
-    border-left: 2px solid var(--cde-dark);
-    border-right: 2px solid var(--cde-white);
-    border-bottom: 2px solid var(--cde-white);
-    background-color: #a0a0a0;
+    background-color: var(--cm-surface2);
 }
 
 .kg-file-card-contents {
@@ -232,12 +207,12 @@
 
 .kg-file-card-caption {
     font-size: 0.9rem;
-    color: var(--cde-text-muted);
+    color: var(--cm-subtext0);
 }
 
 .kg-file-card-metadata {
     font-size: 0.8rem;
-    color: var(--cde-text-muted);
+    color: var(--cm-overlay1);
 }
 
 .kg-file-card-icon {
@@ -246,28 +221,20 @@
     margin-left: 16px;
 }
 
-/* Ghost Embed Card */
+/* Embed Card — dark flat */
 .kg-embed-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-bottom: 1.5em;
-    /* Raised Panel for the container */
-    background-color: var(--cde-bg);
-    border-top: 2px solid var(--cde-white);
-    border-left: 2px solid var(--cde-white);
-    border-right: 2px solid var(--cde-dark);
-    border-bottom: 2px solid var(--cde-dark);
+    background-color: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2);
     padding: 10px;
 }
 
 .kg-embed-card iframe {
-    /* Inset Bevel for the content */
-    border-top: 2px solid var(--cde-dark);
-    border-left: 2px solid var(--cde-dark);
-    border-right: 2px solid var(--cde-white);
-    border-bottom: 2px solid var(--cde-white);
+    border: 1px solid var(--cm-surface1);
     width: 100%;
 }
 
@@ -283,12 +250,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* Raised Panel for the container */
-    background-color: var(--cde-bg);
-    border-top: 2px solid var(--cde-white);
-    border-left: 2px solid var(--cde-white);
-    border-right: 2px solid var(--cde-dark);
-    border-bottom: 2px solid var(--cde-dark);
+    background-color: var(--cm-surface0);
+    border: 1px solid var(--cm-surface2);
     padding: 10px;
     width: fit-content;
     margin: 0 auto;
@@ -310,7 +273,7 @@
 /* Captions */
 figcaption {
     font-size: 0.8rem;
-    color: var(--cde-text-muted);
+    color: var(--cm-overlay1);
     text-align: center;
     font-style: italic;
     max-width: 45rem;
@@ -332,11 +295,7 @@ figcaption {
 }
 
 .kg-card img {
-    /* Ensure images in captioned cards also get the inset look if they don't have it */
-    border-top: 2px solid var(--cde-dark);
-    border-left: 2px solid var(--cde-dark);
-    border-right: 2px solid var(--cde-white);
-    border-bottom: 2px solid var(--cde-white);
+    border: 1px solid var(--cm-surface1);
 }
 
 .kg-gallery-card,

@@ -1,18 +1,37 @@
-{{- /* Partial: header.html — CDE System Bar */ -}}
-<div class="cde-system-bar">
-	<button id="system-bar-menu-toggle" class="cde-system-bar-btn mobile-only" aria-label="Menu">Menu <span class="cde-menu-icon">▼</span></button>
+{{- /* Partial: header.html — Sway-style System Bar */ -}}
+<div class="wm-system-bar">
+	<button id="system-bar-menu-toggle" class="wm-system-bar-btn mobile-only" aria-label="Menu">☰</button>
+
 	<div class="system-bar-content">
+		{{- /* Left: Workspace-style nav indicators */ -}}
 		<div class="system-bar-nav">
 			<ul class="nav">
 				{{ range .Site.Menus.main }}
+					{{ $url := .URL | relURL }}
+					{{ $pageUrl := $.RelPermalink }}
+					{{ $isActive := false }}
+					{{ if eq $url $pageUrl }}
+						{{ $isActive = true }}
+					{{ else if and (ne $url "/") (ne $url ("/" | relURL)) (hasPrefix $pageUrl $url) }}
+						{{ $isActive = true }}
+					{{ else if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+						{{ $isActive = true }}
+					{{ end }}
 					<li>
-						<a href="{{ .URL }}" class="cde-system-bar-btn{{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+						<a href="{{ .URL }}" class="wm-workspace-indicator{{ if $isActive }} active{{ end }}">{{ .Name }}</a>
 					</li>
 				{{ end }}
 			</ul>
 		</div>
-		<div class="system-bar-clock">
-			<div id="cde-clock"></div>
+
+		{{- /* Center: Focused window title (updated via JS on hover) */ -}}
+		<div class="system-bar-title">
+			<span id="wm-title">{{ .Title | default .Site.Title }}</span>
+		</div>
+
+		{{- /* Right: System tray (clock) */ -}}
+		<div class="system-bar-tray">
+			<div id="wm-clock"></div>
 		</div>
 	</div>
 </div>

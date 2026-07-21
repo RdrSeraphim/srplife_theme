@@ -1,0 +1,13 @@
+{{- /* Partial: wm-window-top.html — Tiling WM window (flat dark card)
+    Usage: {{ partial "wm-window-top.html" (dict "title" "~/posts" "closeURL" "" "style" "" "class" "")
+}}
+- title: stored as data-wm-title for system bar hover display
+- closeURL: unused in tiling mode (kept for API compat)
+- style: optional inline style for the .wm-window element
+- class: optional additional CSS class for the .wm-window element */ -}}
+{{ $title := .title | default "~" }}
+{{ $closeURL := .closeURL | default "" }}
+{{ $style := .style | default "" }}
+{{ $class := .class | default "" }}
+<div class="wm-window{{ with $class }} {{ . }}{{ end }}" data-wm-title="{{ $title }}" {{ with $style }}style="{{ . }}"{{ end }}>
+	<div class="wm-window-content">
