@@ -6,8 +6,8 @@ html {
     font-family: var(--font-sans);
     /* Background image already set by user */
     background-image: url("/images/gate_mocha.jpg");
-    background-size: cover;
-    background-color: var(--cm-crust);
+    background-attachment: fixed;
+    background-position: center;
 }
 
 *,
