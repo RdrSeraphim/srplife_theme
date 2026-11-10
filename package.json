@@ -2,7 +2,7 @@
     "name": "srplife",
     "description": "A CDE/Solaris-inspired retro theme for Hugo.",
     "demo": "https://srp.life",
-    "version": "3.0.0",
+    "version": "4.2.0",
     "scripts": {
         "dev": "cd exampleSite && hugo server --themesDir ../.. --port 8787 --buildDrafts --disableFastRender",
         "build": "cd exampleSite && hugo --themesDir ../.. --minify"
