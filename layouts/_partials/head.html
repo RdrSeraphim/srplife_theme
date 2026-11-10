@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else if .IsPage }}{{ .Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}" />
-<meta name="theme-color" content="#cba6f7" />
+<meta name="theme-color" content="#CBA6F7" />
 {{ $opts := dict "inlineImports" true }}
 {{- with resources.Get "css/main.css" -}}
 	{{- if hugo.IsDevelopment -}}
